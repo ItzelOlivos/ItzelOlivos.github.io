@@ -69,6 +69,25 @@
 	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
 	<!-- Styles -->
 	<link rel="stylesheet" href="/assets/css/main.css">
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$$','$$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\(","\\)"] ],
+        },
+        TeX: {
+          Macros: {
+            bra: ["\\langle{#1}|", 1],
+            ket: ["|{#1}\\rangle", 1],
+            braket: ["\\langle{#1}\\rangle", 1],
+            bk: ["\\langle{#1}|{#2}|{#3}\\rangle", 3]
+         }
+       }
+      });
+    </script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML' async></script>
 </head>
 
 <body>
@@ -81,7 +100,7 @@
         <a href="/"><img src="/assets/img/itzel.jpg" alt="Itzel Olivos"></a>
       </div>
       <div class="author-name">Itzel Olivos</div>
-      <p>I am happy woman :)</p>
+      <p>I am ... short bio</p>
     </div>
   </header> <!-- End Header -->
   <footer>
