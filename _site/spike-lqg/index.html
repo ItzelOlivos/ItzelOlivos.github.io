@@ -146,11 +146,11 @@
     </div>
     <div class="about">
       <button type="button" id="btnProjects" value="Projects" onclick="dispProjects()"
-              style="background-color: black; border-color: black; color: white">Projects</button>
+              style="background-color: black; border-color: black; color: white; border-width: 1px">Projects</button>&nbsp;
       <button type="button" id="btnPosts" value="Posts" onclick="dispPosts()"
-              style="background-color: white; border-color: black">Posts</button>
+              style="background-color: white; border-color: black; color: black; border-width: 1px" >Posts</button>&nbsp;
       <button type="button" id="btnNews" value="News" onclick="dispNews()"
-              style="background-color: white; border-color: black">News</button>
+              style="background-color: white; border-color: black; color: black; border-width: 1px">News</button>&nbsp;
     </div>
 
   </header> <!-- End Header -->
@@ -209,8 +209,6 @@
 <h2 id="results">Results</h2>
 <p>For PPCs using a population of neurons with dense uniformly spaced tuning curves, the expected uncertainty in the observations is approximately independent of position, and inversely proportional to the sensory gain $g^{\rm in}$. The dynamic PPC encodes beliefs given a fixed sensory gain that yields time-dependent distributions whose natural parameter, $\boldsymbol{a}!\cdot!\boldsymbol{r}<em>t^{\rm out}$, converges quickly to an equilibrium determined by properties of the system to be controlled, including open-loop stability given by the transition matrix $A$, the process noise $\Sigma</em>\eta$, and the sensory gain $g^{\rm in}$, width $w$, and spacing $\Delta \theta$ of the tuning curves. Figure \ref{Fig:Data1} shows that the optimal network uses a gain smaller than 1 to reduce its spike count while stabilizing the system through closed-loop control. The optimal recurrent gain depends on the sensory gain, with stronger inputs permitting weaker inferences. %We show that the resultant cost rate to encode observations is given by $C’<em>{\rm obs} = (\sqrt{2\pi} g^{\rm in} w/ \Delta \theta) dt$, while the cost rate to encode beliefs is $C’</em>{\rm bel} = (N\alpha_t / \sigma^2_t) dt$, where $\alpha_t$ is a baseline parameter required to shift the neural responses to ensure positive firing rates as the state changes.</p>
 
-<p><img src="/assets/img/we-in-rest.jpg" alt="camption image" /></p>
-
 <p>We also consider an active sensing version in which the input gain $g^{\rm in}$ can change over time. Finding sequences of $g_t^{\rm in}$ that minimize $C_{\rm sys}$ subject to a budget of spikes then becomes a trajectory optimization problem. We use Deep Temporal Difference Learning \cite{mnih2015human} to compute approximately optimal sensing policies; in this setting, the agent allocates more spikes in states where making mistakes is highly punished, a strategy that is often observed in behavioral experiments, and may provide a prediction for arousal signals reflected in neural activity and pupil dilation.</p>
 
 <p>\({X}_{0}\) (works)
@@ -220,9 +218,9 @@
 
       <div class="page-footer">
         <div class="page-share">
+          <h4>Share it on:</h4>
           <a href="https://twitter.com/intent/tweet?text=Spike-Constrained Stochastic Control&url=http://localhost:4000/spike-lqg/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
           <a href="https://facebook.com/sharer.php?u=http://localhost:4000/spike-lqg/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
-          <a href="https://plus.google.com/share?url=http://localhost:4000/spike-lqg/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
         </div>
         <div class="page-tag">
           
