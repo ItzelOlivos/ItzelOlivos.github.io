@@ -1,0 +1,17 @@
+---
+layout: post
+title: Robots que juegan "Adivina Quién"
+date: 2021-03-11 00:00:00 +0300
+description: spanish
+img: adivina.jpg
+tags: [deep learning] # add tag
+---
+Reinforcement Learning (RL) se ha convertido en la bala de plata detrás de muchos avances en robótica; hoy en día, por ejemplo, es común ver robots autónomos que aprenden, mediante RL, cómo desarrollar tareas esenciales en los almacenes de Amazon (mira [esto](https://www.youtube.com/watch?v=PC-9HYJ1nCI)!). No obstante, los algoritmos de tipo RL requieren que un humano experto diseñe una función de recompensa capaz de codificar el objetivo de la tarea. ¡Esto suena súper raro! pero como los robots no hablan ni español, ni inglés, ni chino, ¿de qué otra manera podríamos hacerles saber qué es exactamente lo que queremos que hagan?
+
+En la Universidad de Stanford, la Doctora Dorsa Sadigh tiene una idea mejor. En su artículo de investigación [“Learning reward functions by integrating human demonstrations and preferences“](https://arxiv.org/abs/1906.08928), la Doctora muestra cómo es que, mediante demostraciones de un humano experto y una serie de preguntas hechas por el robot, éste puede sintetizar por sí solo la función de recompensa que codifica la tarea que debe realizar.
+
+La idea de permitir al robot aprender la función de recompensa mediante demostraciones no es nueva, se conoce como Inverse Reinforcement Learning (IRL) desde hace varios años; sin embargo, IRL requiere que un humano opere de manera remota un robot cuya fisionomía es distinta a la nuestra (el robot Fetch que vemos en la imagen, por ejemplo, pareciera tener un brazo ¡con tres codos! esto, naturalmente, causa demostraciones imprecisas). La idea innovadora de la Doctora Sadigh es complementar IRL con una técnica de aprendizaje, conocida como Active Learning, que le permite al robot hacer preguntas sobre las preferencias del humano hasta encontrar la función de recompensa que mejor codifica la tarea que éste debe realizar.
+
+El proceso es simple: 1. El humano le demuestra al robot qué desea que éste haga al operarlo de manera remota y ejecutar la tarea de interés (por ejemplo, recolectar un objeto y moverlo hasta una nueva posición). 2. El robot genera una distribución de probabilidad sobre las trayectorias (o hipótesis) que podrían explicar lo que el humano intenta demostrar. 3. El robot elige el par de hipótesis que maximizan la cantidad de información que se podría obtener tras recibir la respuesta del humano. 4. El humano elige cuál de las hipótesis es la más cercana a lo que él o ella intenta demostrar. 5. la distribución de probabilidad sobre todas las posibles hipótesis se actualiza. y 6. El proceso continúa desde el paso 3 hasta que el robot tiene confianza en que cierta hipótesis es la verdadera. Básicamente, el robot juega Adivina Quién con el human, solo que en lugar de personajes, el robot propone trayectorias, y en lugar de preguntar si “su personaje tiene barba”, pregunta si hipótesis X se acerca más o menos que hipótesis Y a su verdadera intención 🙂
+
+En conclusión, este algoritmo permite que humanos no expertos en robótica enseñen a las máquinas cómo resolver tareas de una manera intuitiva.

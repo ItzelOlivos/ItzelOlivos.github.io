@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Robots que juegan "Adivina Quién" - Itzel Olivos-Castillo</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Itzel Olivos-Castillo" property="og:site_name">
+  
+    <meta content="Robots que juegan "Adivina Quién"" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="spanish" property="og:description">
+  
+  
+    <meta content="http://localhost:4000/adivina/" property="og:url">
+  
+  
+    <meta content="2021-03-10T15:00:00-06:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+  
+  
+    <meta content="http://localhost:4000/assets/img/adivina.jpg" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="deep learning" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@_ItzelCoral">
+  
+    <meta name="twitter:title" content="Robots que juegan "Adivina Quién"">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/adivina/">
+  
+  
+    <meta name="twitter:description" content="spanish">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/adivina.jpg">
+  
+
+	<meta name="description" content="spanish">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-touch-icon-144x144.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Lato:300,400,700&display=swap" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$$','$$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\(","\\)"] ],
+        },
+        TeX: {
+          Macros: {
+            bra: ["\\langle{#1}|", 1],
+            ket: ["|{#1}\\rangle", 1],
+            braket: ["\\langle{#1}\\rangle", 1],
+            bk: ["\\langle{#1}|{#2}|{#3}\\rangle", 3]
+         }
+       }
+      });
+    </script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML' async></script>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <script type="text/javascript">
+  document.getElementById('cat_buttons').style.display = 'flex';
+
+  function dispProjects() {
+    document.getElementById('dispProj').style.display = 'flex';
+    document.getElementById('dispPosts').style.display = 'none';
+    document.getElementById('dispNews').style.display = 'none';
+
+    document.getElementById('btnProjects').style.backgroundColor = 'black';
+    document.getElementById('btnProjects').style.color = 'white';
+    document.getElementById('btnPosts').style.backgroundColor = 'white'
+    document.getElementById('btnPosts').style.color = 'black';
+    document.getElementById('btnNews').style.backgroundColor = 'white';
+    document.getElementById('btnNews').style.color = 'black';
+  }
+  function dispPosts() {
+    document.getElementById('dispProj').style.display = 'none';
+    document.getElementById('dispPosts').style.display = 'flex';
+    document.getElementById('dispNews').style.display = 'none';
+
+    document.getElementById('btnProjects').style.backgroundColor = 'white';
+    document.getElementById('btnProjects').style.color = 'black';
+    document.getElementById('btnPosts').style.backgroundColor = 'black';
+    document.getElementById('btnPosts').style.color = 'white';
+    document.getElementById('btnNews').style.backgroundColor = 'white';
+    document.getElementById('btnNews').style.color = 'black';
+  }
+  function dispNews() {
+    document.getElementById('dispProj').style.display = 'none';
+    document.getElementById('dispPosts').style.display = 'none';
+    document.getElementById('dispNews').style.display = 'flex';
+
+    document.getElementById('btnProjects').style.backgroundColor = 'white';
+    document.getElementById('btnProjects').style.color = 'black';
+    document.getElementById('btnPosts').style.backgroundColor = 'white';
+    document.getElementById('btnPosts').style.color = 'black';
+    document.getElementById('btnNews').style.backgroundColor = 'black';
+    document.getElementById('btnNews').style.color = 'white';
+
+  }
+</script>
+
+<aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/itzel.jpg" alt="Itzel Olivos-Castillo"></a>
+      </div>
+      <div class="author-name">Itzel Olivos-Castillo</div>
+      <p>I am ... short bio</p>
+    </div>
+    <div id='cat_buttons' class="about">
+      <button type="button" id="btnProjects" value="Projects" onclick="dispProjects()"
+              style="background-color: black; border-color: black; color: white; border-width: 1px">Projects</button>&nbsp;
+      <button type="button" id="btnPosts" value="Posts" onclick="dispPosts()"
+              style="background-color: white; border-color: black; color: black; border-width: 1px" >Posts</button>&nbsp;
+      <button type="button" id="btnNews" value="News" onclick="dispNews()"
+              style="background-color: white; border-color: black; color: black; border-width: 1px">News</button>&nbsp;
+    </div>
+
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://twitter.com/_ItzelCoral" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/ItzelOlivos" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:itzel@rice.edu"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2022 &copy; Itzel Olivos-Castillo</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <script>
+  document.getElementById('cat_buttons').style.display = 'none';
+</script>
+
+<article class="article-page">
+  <div class="page-content">
+    
+    <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src=/assets/img/adivina.jpg alt="Robots que juegan "Adivina Quién"">
+        
+      </figure>
+    </div> <!-- End Page Cover Image -->
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">Robots que juegan "Adivina Quién"</h1>
+        <div class="page-date"><span>2021, Mar 10&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <p>Reinforcement Learning (RL) se ha convertido en la bala de plata detrás de muchos avances en robótica; hoy en día, por ejemplo, es común ver robots autónomos que aprenden, mediante RL, cómo desarrollar tareas esenciales en los almacenes de Amazon (mira <a href="https://www.youtube.com/watch?v=PC-9HYJ1nCI">esto</a>!). No obstante, los algoritmos de tipo RL requieren que un humano experto diseñe una función de recompensa capaz de codificar el objetivo de la tarea. ¡Esto suena súper raro! pero como los robots no hablan ni español, ni inglés, ni chino, ¿de qué otra manera podríamos hacerles saber qué es exactamente lo que queremos que hagan?</p>
+
+<p>En la Universidad de Stanford, la Doctora Dorsa Sadigh tiene una idea mejor. En su artículo de investigación <a href="https://arxiv.org/abs/1906.08928">“Learning reward functions by integrating human demonstrations and preferences“</a>, la Doctora muestra cómo es que, mediante demostraciones de un humano experto y una serie de preguntas hechas por el robot, éste puede sintetizar por sí solo la función de recompensa que codifica la tarea que debe realizar.</p>
+
+<p>La idea de permitir al robot aprender la función de recompensa mediante demostraciones no es nueva, se conoce como Inverse Reinforcement Learning (IRL) desde hace varios años; sin embargo, IRL requiere que un humano opere de manera remota un robot cuya fisionomía es distinta a la nuestra (el robot Fetch que vemos en la imagen, por ejemplo, pareciera tener un brazo ¡con tres codos! esto, naturalmente, causa demostraciones imprecisas). La idea innovadora de la Doctora Sadigh es complementar IRL con una técnica de aprendizaje, conocida como Active Learning, que le permite al robot hacer preguntas sobre las preferencias del humano hasta encontrar la función de recompensa que mejor codifica la tarea que éste debe realizar.</p>
+
+<p>El proceso es simple: 1. El humano le demuestra al robot qué desea que éste haga al operarlo de manera remota y ejecutar la tarea de interés (por ejemplo, recolectar un objeto y moverlo hasta una nueva posición). 2. El robot genera una distribución de probabilidad sobre las trayectorias (o hipótesis) que podrían explicar lo que el humano intenta demostrar. 3. El robot elige el par de hipótesis que maximizan la cantidad de información que se podría obtener tras recibir la respuesta del humano. 4. El humano elige cuál de las hipótesis es la más cercana a lo que él o ella intenta demostrar. 5. la distribución de probabilidad sobre todas las posibles hipótesis se actualiza. y 6. El proceso continúa desde el paso 3 hasta que el robot tiene confianza en que cierta hipótesis es la verdadera. Básicamente, el robot juega Adivina Quién con el human, solo que en lugar de personajes, el robot propone trayectorias, y en lugar de preguntar si “su personaje tiene barba”, pregunta si hipótesis X se acerca más o menos que hipótesis Y a su verdadera intención 🙂</p>
+
+<p>En conclusión, este algoritmo permite que humanos no expertos en robótica enseñen a las máquinas cómo resolver tareas de una manera intuitiva.</p>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <h4>Share it on:</h4>
+          <a href="https://twitter.com/intent/tweet?text=Robots que juegan "Adivina Quién"&url=http://localhost:4000/adivina/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/adivina/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#deep learning" class="tag">&#35; deep learning</a>
+          
+        </div>
+      </div>
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>
