@@ -89,6 +89,8 @@
 
   <div class="wrapper">
     <script type="text/javascript">
+  document.getElementById('cat_buttons').style.display = 'flex';
+
   function dispProjects() {
     document.getElementById('dispProj').style.display = 'flex';
     document.getElementById('dispPosts').style.display = 'none';
@@ -137,7 +139,7 @@
       <div class="author-name">Itzel Olivos-Castillo</div>
       <p>I am ... short bio</p>
     </div>
-    <div class="about">
+    <div id='cat_buttons' class="about">
       <button type="button" id="btnProjects" value="Projects" onclick="dispProjects()"
               style="background-color: black; border-color: black; color: white; border-width: 1px">Projects</button>&nbsp;
       <button type="button" id="btnPosts" value="Posts" onclick="dispPosts()"
@@ -246,6 +248,10 @@
   
     
   
+    
+  
+    
+  
 </div>
 
 <div id="dispPosts" class="child-content-box clearfix" style="display:none">
@@ -290,6 +296,34 @@
           </article>
       
   
+      
+          <article class="post">
+            
+              <a class="post-thumbnail" style="background-image: url(/assets/img/movies-ia.png)" href="/movies-ai/"></a>
+            
+            <div class="post-content">
+              <h2 class="post-title"><a href="/movies-ai/">Inteligencia Artificial, De Hollywood a la vida real</a></h2>
+              <p>“Porque te tengo y no, porque te pienso, porque la noche está de ojos abiertos…...</p>
+              <span class="post-date">2018, Dec 01&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+              <span class="post-words">3 minute read</span>
+            </div>
+          </article>
+      
+  
+      
+          <article class="post">
+            
+              <a class="post-thumbnail" style="background-image: url(/assets/img/intro-rl.jpg)" href="/intro-rl/"></a>
+            
+            <div class="post-content">
+              <h2 class="post-title"><a href="/intro-rl/">Aprendiendo a andar en bici sin leer el manual</a></h2>
+              <p>¿Por qué es fácil andar en bicicleta pero difícil explicarle a un novato cómo debería...</p>
+              <span class="post-date">2018, Jun 09&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+              <span class="post-words">2 minute read</span>
+            </div>
+          </article>
+      
+  
 </div>
 
 <div id="dispNews" class="child-content-box clearfix" style="display:none">
@@ -322,6 +356,10 @@
   
       
   
+      
+  
+      
+  
 </div>
 <div class="container">
   <nav class="pagination" role="pagination">
@@ -329,11 +367,7 @@
       
 
       
-      <p><span class="page-number">Page 1 of 2</span></p>
       
-      
-      
-      <p><a class="older-posts" href="/page/2/"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></p>
       
     </ul>
   </nav>

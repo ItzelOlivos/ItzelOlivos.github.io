@@ -100,6 +100,8 @@
 
   <div class="wrapper">
     <script type="text/javascript">
+  document.getElementById('cat_buttons').style.display = 'flex';
+
   function dispProjects() {
     document.getElementById('dispProj').style.display = 'flex';
     document.getElementById('dispPosts').style.display = 'none';
@@ -148,7 +150,7 @@
       <div class="author-name">Itzel Olivos-Castillo</div>
       <p>I am ... short bio</p>
     </div>
-    <div class="about">
+    <div id='cat_buttons' class="about">
       <button type="button" id="btnProjects" value="Projects" onclick="dispProjects()"
               style="background-color: black; border-color: black; color: white; border-width: 1px">Projects</button>&nbsp;
       <button type="button" id="btnPosts" value="Posts" onclick="dispPosts()"
@@ -179,7 +181,11 @@
   </footer> <!-- End Footer -->
 </aside> <!-- End Sidebar -->
 <div class="content-box clearfix">
-  <article class="article-page">
+  <script>
+  document.getElementById('cat_buttons').style.display = 'none';
+</script>
+
+<article class="article-page">
   <div class="page-content">
     
     <div class="page-cover-image">
