@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SCI Symposium
-date: 2020-08-05 00:00:00 +0300
+date: 2022-08-05 00:00:00 +0300
 description: news
 img: reu-rice.jpg
 tags: [stories] # add tag
