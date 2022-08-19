@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Hello, world! TBD</title>
+	<title>Itzel Olivos-Castillo</title>
 
   <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
 
-    <meta content="Hello, world! TBD" property="og:site_name">
+    <meta content="Itzel Olivos-Castillo" property="og:site_name">
   
-    <meta content="Hello, world! TBD" property="og:title">
+    <meta content="Itzel Olivos-Castillo" property="og:title">
   
   
     <meta content="website" property="og:type">
@@ -31,7 +31,7 @@
     <meta name="twitter:site" content="@">
     <meta name="twitter:creator" content="@_ItzelCoral">
   
-    <meta name="twitter:title" content="Hello, world! TBD">
+    <meta name="twitter:title" content="Itzel Olivos-Castillo">
   
   
     <meta name="twitter:url" content="http://localhost:4000/">
@@ -88,15 +88,64 @@
 <body>
 
   <div class="wrapper">
-    <aside class="sidebar">
+    <script type="text/javascript">
+  function dispProjects() {
+    document.getElementById('dispProj').style.display = 'flex';
+    document.getElementById('dispPosts').style.display = 'none';
+    document.getElementById('dispNews').style.display = 'none';
+
+    document.getElementById('btnProjects').style.backgroundColor = 'black';
+    document.getElementById('btnProjects').style.color = 'white';
+    document.getElementById('btnPosts').style.backgroundColor = 'white'
+    document.getElementById('btnPosts').style.color = 'black';
+    document.getElementById('btnNews').style.backgroundColor = 'white';
+    document.getElementById('btnNews').style.color = 'black';
+  }
+  function dispPosts() {
+    document.getElementById('dispProj').style.display = 'none';
+    document.getElementById('dispPosts').style.display = 'flex';
+    document.getElementById('dispNews').style.display = 'none';
+
+    document.getElementById('btnProjects').style.backgroundColor = 'white';
+    document.getElementById('btnProjects').style.color = 'black';
+    document.getElementById('btnPosts').style.backgroundColor = 'black';
+    document.getElementById('btnPosts').style.color = 'white';
+    document.getElementById('btnNews').style.backgroundColor = 'white';
+    document.getElementById('btnNews').style.color = 'black';
+  }
+  function dispNews() {
+    document.getElementById('dispProj').style.display = 'none';
+    document.getElementById('dispPosts').style.display = 'none';
+    document.getElementById('dispNews').style.display = 'flex';
+
+    document.getElementById('btnProjects').style.backgroundColor = 'white';
+    document.getElementById('btnProjects').style.color = 'black';
+    document.getElementById('btnPosts').style.backgroundColor = 'white';
+    document.getElementById('btnPosts').style.color = 'black';
+    document.getElementById('btnNews').style.backgroundColor = 'black';
+    document.getElementById('btnNews').style.color = 'white';
+
+  }
+</script>
+
+<aside class="sidebar">
   <header>
     <div class="about">
       <div class="cover-author-image">
-        <a href="/"><img src="/assets/img/itzel.jpg" alt="Itzel Olivos"></a>
+        <a href="/"><img src="/assets/img/itzel.jpg" alt="Itzel Olivos-Castillo"></a>
       </div>
-      <div class="author-name">Itzel Olivos</div>
+      <div class="author-name">Itzel Olivos-Castillo</div>
       <p>I am ... short bio</p>
     </div>
+    <div class="about">
+      <button type="button" id="btnProjects" value="Projects" onclick="dispProjects()"
+              style="background-color: black; border-color: black; color: white">Projects</button>
+      <button type="button" id="btnPosts" value="Posts" onclick="dispPosts()"
+              style="background-color: white; border-color: black">Posts</button>
+      <button type="button" id="btnNews" value="News" onclick="dispNews()"
+              style="background-color: white; border-color: black">News</button>
+    </div>
+
   </header> <!-- End Header -->
   <footer>
     <section class="contact">
@@ -106,13 +155,7 @@
           <li><a href="https://twitter.com/_ItzelCoral" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
         
         
-          <li><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-        
-        
           <li class="github"><a href="http://github.com/ItzelOlivos" target="_blank"><i class="fa fa-github"></i></a></li>
-        
-        
-          <li class="linkedin"><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
         
         
           <li class="email"><a href="mailto:itzel@rice.edu"><i class="fa fa-envelope-o"></i></a></li>
@@ -120,99 +163,167 @@
       </ul>
     </section> <!-- End Section Contact -->
     <div class="copyright">
-      <p>2022 &copy; Itzel Olivos</p>
+      <p>2022 &copy; Itzel Olivos-Castillo</p>
     </div>
   </footer> <!-- End Footer -->
 </aside> <!-- End Sidebar -->
 <div class="content-box clearfix">
+  <div id="dispProj" class="child-content-box clearfix" style="display:flex">
   
-<article class="post">
-  
-    <a class="post-thumbnail" style="background-image: url(/assets/img/animation-spikes.gif)" href="/spike-lqg/"></a>
-  
-  <div class="post-content">
-    <h2 class="post-title"><a href="/spike-lqg/">Spike-Constrained Stochastic Control</a></h2>
-    <p>We develop a version of stochastic control that accounts for computational costs in the brain....</p>
-    <span class="post-date">2022, Aug 15&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">5 minute read</span>
-  </div>
-</article>
-
-<article class="post">
-  
-    <a class="post-thumbnail" style="background-image: url(/assets/img/animation-flucking.gif)" href="/conference-on-javascript/"></a>
-  
-  <div class="post-content">
-    <h2 class="post-title"><a href="/conference-on-javascript/">Consensus-Based Inference and Control</a></h2>
-    <p>Jean shorts organic cornhole, gochujang post-ironic chicharrones authentic flexitarian viral PBR&amp;B forage wolf. Man braid...</p>
-    <span class="post-date">2021, Dec 09&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">2 minute read</span>
-  </div>
-</article>
-
-<article class="post">
-  
-    <a class="post-thumbnail" style="background-image: url(/assets/img/animation-tictactoe.gif)" href="/tictactoe/"></a>
-  
-  <div class="post-content">
-    <h2 class="post-title"><a href="/tictactoe/">Q-learning Masters TicTacToe</a></h2>
-    <p>Post-ironic jean shorts bushwick umami, synth beard austin hell of meh kitsch distillery sustainable plaid...</p>
-    <span class="post-date">2019, Aug 10&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">3 minute read</span>
-  </div>
-</article>
-
-<article class="post">
-  
-    <a class="post-thumbnail" style="background-image: url(/assets/img/animation-goal.gif)" href="/goal-cr/"></a>
-  
-  <div class="post-content">
-    <h2 class="post-title"><a href="/goal-cr/">Tackling the Contention Resolution Problem</a></h2>
-    <p>Church-key blog messenger bag, selfies umami man braid mlkshk. Pork belly cornhole meditation tumblr meh...</p>
-    <span class="post-date">2019, Feb 27&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">3 minute read</span>
-  </div>
-</article>
-
-<article class="post">
-  
-    <a class="post-thumbnail" style="background-image: url(/assets/img/animation-scholar.gif)" href="/scholar/"></a>
-  
-  <div class="post-content">
-    <h2 class="post-title"><a href="/scholar/">Scrapping Google Scholar</a></h2>
-    <p>Asymmetrical portland enamel pin af heirloom ramps authentic thundercats. Synth truffaut schlitz aesthetic, palo santo...</p>
-    <span class="post-date">2019, Jan 20&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">5 minute read</span>
-  </div>
-</article>
-
-<article class="post">
-  
-  
-  <div class="post-content">
-    <h2 class="post-title"><a href="/welcome-to-jekyll/">Welcome to Jekyll!</a></h2>
-    <p>You’ll find this post in your _posts directory. Go ahead and edit it and re-build...</p>
-    <span class="post-date">2017, Apr 06&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">1 minute read</span>
-  </div>
-</article>
-
-
-<div class="container">
-  <nav class="pagination" role="pagination">
-    <ul>
       
-
+          <article class="post">
+            
+              <a class="post-thumbnail" style="background-image: url(/assets/img/animation-spikes.gif)" href="/spike-lqg/"></a>
+            
+            <div class="post-content">
+              <h2 class="post-title"><a href="/spike-lqg/">Spike-Constrained Stochastic Control</a></h2>
+              <p>We develop a version of stochastic control that accounts for computational costs in the brain....</p>
+              <span class="post-date">2022, Aug 15&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+              <span class="post-words">5 minute read</span>
+            </div>
+          </article>
       
+  
       
+          <article class="post">
+            
+              <a class="post-thumbnail" style="background-image: url(/assets/img/animation-flucking.gif)" href="/consensus/"></a>
+            
+            <div class="post-content">
+              <h2 class="post-title"><a href="/consensus/">Consensus-Based Inference and Control</a></h2>
+              <p>Jean shorts organic cornhole, gochujang post-ironic chicharrones authentic flexitarian viral PBR&amp;B forage wolf. Man braid...</p>
+              <span class="post-date">2021, Dec 09&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+              <span class="post-words">2 minute read</span>
+            </div>
+          </article>
       
-    </ul>
-  </nav>
+  
+      
+  
+      
+  
+      
+          <article class="post">
+            
+              <a class="post-thumbnail" style="background-image: url(/assets/img/animation-tictactoe.gif)" href="/tictactoe/"></a>
+            
+            <div class="post-content">
+              <h2 class="post-title"><a href="/tictactoe/">Q-learning Masters TicTacToe</a></h2>
+              <p>Post-ironic jean shorts bushwick umami, synth beard austin hell of meh kitsch distillery sustainable plaid...</p>
+              <span class="post-date">2019, Aug 10&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+              <span class="post-words">3 minute read</span>
+            </div>
+          </article>
+      
+  
+      
+  
+      
+  
+      
+          <article class="post">
+            
+              <a class="post-thumbnail" style="background-image: url(/assets/img/animation-goal.gif)" href="/goal-cr/"></a>
+            
+            <div class="post-content">
+              <h2 class="post-title"><a href="/goal-cr/">Tackling the Contention Resolution Problem</a></h2>
+              <p>Church-key blog messenger bag, selfies umami man braid mlkshk. Pork belly cornhole meditation tumblr meh...</p>
+              <span class="post-date">2019, Feb 27&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+              <span class="post-words">3 minute read</span>
+            </div>
+          </article>
+      
+  
 </div>
 
-
+<div id="dispPosts" class="child-content-box clearfix" style="display:none">
+  
+      
+  
+      
+  
+      
+  
+      
+          <article class="post">
+            
+              <a class="post-thumbnail" style="background-image: url(/assets/img/movies-ia.png)" href="/movies-ai/"></a>
+            
+            <div class="post-content">
+              <h2 class="post-title"><a href="/movies-ai/">Inteligencia Artificial, De Hollywood a la vida real</a></h2>
+              <p>“Porque te tengo y no, porque te pienso, porque la noche está de ojos abiertos…...</p>
+              <span class="post-date">2019, Dec 01&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+              <span class="post-words">3 minute read</span>
+            </div>
+          </article>
+      
+  
+      
+  
+      
+          <article class="post">
+            
+              <a class="post-thumbnail" style="background-image: url(/assets/img/intro-rl.jpg)" href="/intro-rl/"></a>
+            
+            <div class="post-content">
+              <h2 class="post-title"><a href="/intro-rl/">Aprendiendo a andar en bici sin leer el manual</a></h2>
+              <p>¿Por qué es fácil andar en bicicleta pero difícil explicarle a un novato cómo debería...</p>
+              <span class="post-date">2019, Jun 09&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+              <span class="post-words">2 minute read</span>
+            </div>
+          </article>
+      
+  
+      
+          <article class="post">
+            
+              <a class="post-thumbnail" style="background-image: url(/assets/img/bayesian-brain.png)" href="/bayesian-brain/"></a>
+            
+            <div class="post-content">
+              <h2 class="post-title"><a href="/bayesian-brain/">Cerebros Bayesianos</a></h2>
+              <p>Los humanos somos capaces de sobrevivir en un mundo lleno de incertidumbre; por ejemplo, ¿cómo...</p>
+              <span class="post-date">2019, May 10&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+              <span class="post-words">3 minute read</span>
+            </div>
+          </article>
+      
+  
+      
+  
 </div>
 
+<div id="dispNews" class="child-content-box clearfix" style="display:none">
+  
+      
+  
+      
+  
+      
+          <article class="post">
+            
+              <a class="post-thumbnail" style="background-image: url(/assets/img/presea2021.jpg)" href="/presea-edomex/"></a>
+            
+            <div class="post-content">
+              <h2 class="post-title"><a href="/presea-edomex/">Presea Estado de Mexico 2020</a></h2>
+              <p>Jean shorts organic cornhole, gochujang post-ironic chicharrones authentic flexitarian viral PBR&amp;B forage wolf. Man braid...</p>
+              <span class="post-date">2021, Mar 01&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+              <span class="post-words">1 minute read</span>
+            </div>
+          </article>
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+</div>
+</div>
   </div>
   
   <script>

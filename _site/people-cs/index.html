@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Las matemáticas detrás de un robot inteligente - Itzel Olivos-Castillo</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Itzel Olivos-Castillo" property="og:site_name">
+  
+    <meta content="Las matemáticas detrás de un robot inteligente" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="spanish" property="og:description">
+  
+  
+    <meta content="http://localhost:4000/people-cs/" property="og:url">
+  
+  
+    <meta content="2019-02-10T15:00:00-06:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+  
+  
+    <meta content="http://localhost:4000/assets/img/people-cs.png" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="math" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@_ItzelCoral">
+  
+    <meta name="twitter:title" content="Las matemáticas detrás de un robot inteligente">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/people-cs/">
+  
+  
+    <meta name="twitter:description" content="spanish">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/people-cs.png">
+  
+
+	<meta name="description" content="spanish">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-touch-icon-144x144.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Lato:300,400,700&display=swap" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$$','$$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\(","\\)"] ],
+        },
+        TeX: {
+          Macros: {
+            bra: ["\\langle{#1}|", 1],
+            ket: ["|{#1}\\rangle", 1],
+            braket: ["\\langle{#1}\\rangle", 1],
+            bk: ["\\langle{#1}|{#2}|{#3}\\rangle", 3]
+         }
+       }
+      });
+    </script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML' async></script>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <script type="text/javascript">
+  function dispProjects() {
+    document.getElementById('dispProj').style.display = 'flex';
+    document.getElementById('dispPosts').style.display = 'none';
+    document.getElementById('dispNews').style.display = 'none';
+
+    document.getElementById('btnProjects').style.backgroundColor = 'black';
+    document.getElementById('btnProjects').style.color = 'white';
+    document.getElementById('btnPosts').style.backgroundColor = 'white'
+    document.getElementById('btnPosts').style.color = 'black';
+    document.getElementById('btnNews').style.backgroundColor = 'white';
+    document.getElementById('btnNews').style.color = 'black';
+  }
+  function dispPosts() {
+    document.getElementById('dispProj').style.display = 'none';
+    document.getElementById('dispPosts').style.display = 'flex';
+    document.getElementById('dispNews').style.display = 'none';
+
+    document.getElementById('btnProjects').style.backgroundColor = 'white';
+    document.getElementById('btnProjects').style.color = 'black';
+    document.getElementById('btnPosts').style.backgroundColor = 'black';
+    document.getElementById('btnPosts').style.color = 'white';
+    document.getElementById('btnNews').style.backgroundColor = 'white';
+    document.getElementById('btnNews').style.color = 'black';
+  }
+  function dispNews() {
+    document.getElementById('dispProj').style.display = 'none';
+    document.getElementById('dispPosts').style.display = 'none';
+    document.getElementById('dispNews').style.display = 'flex';
+
+    document.getElementById('btnProjects').style.backgroundColor = 'white';
+    document.getElementById('btnProjects').style.color = 'black';
+    document.getElementById('btnPosts').style.backgroundColor = 'white';
+    document.getElementById('btnPosts').style.color = 'black';
+    document.getElementById('btnNews').style.backgroundColor = 'black';
+    document.getElementById('btnNews').style.color = 'white';
+
+  }
+</script>
+
+<aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/itzel.jpg" alt="Itzel Olivos-Castillo"></a>
+      </div>
+      <div class="author-name">Itzel Olivos-Castillo</div>
+      <p>I am ... short bio</p>
+    </div>
+    <div class="about">
+      <button type="button" id="btnProjects" value="Projects" onclick="dispProjects()"
+              style="background-color: black; border-color: black; color: white">Projects</button>
+      <button type="button" id="btnPosts" value="Posts" onclick="dispPosts()"
+              style="background-color: white; border-color: black">Posts</button>
+      <button type="button" id="btnNews" value="News" onclick="dispNews()"
+              style="background-color: white; border-color: black">News</button>
+    </div>
+
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://twitter.com/_ItzelCoral" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/ItzelOlivos" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:itzel@rice.edu"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2022 &copy; Itzel Olivos-Castillo</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src=/assets/img/people-cs.png alt="Las matemáticas detrás de un robot inteligente">
+        
+      </figure>
+    </div> <!-- End Page Cover Image -->
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">Las matemáticas detrás de un robot inteligente</h1>
+        <div class="page-date"><span>2019, Feb 10&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <p>Llamamos a nuestra especie Homo Sapiens (del latín ser humano sabio) porque nuestra mente es el modelo de inteligencia más poderoso conocido hasta ahora. Sorprendentemente, incluso con todo ese poder que nos otorgó la naturaleza, seguimos preguntándonos cómo es que una máquina biológica, compuesta solo por billones de moléculas independientes que interactúan siguiendo sencillas reglas físicas y químicas, puede pensar, comportarse racionalmente y desarrollar conciencia.</p>
+
+<p>El filósofo griego Aristóteles fue uno de los primeros en intentar codificar nuestro proceso de razonamiento; Aristóteles desarrolló un sistema de silogismos que permitía generar conclusiones mecánicamente, impulsando así la idea de que existen leyes que gobiernan el funcionamiento de la mente y que, por ende, sería posible construir artefactos mecánicos capaces de pensar y actuar por sí mismos. El campo de la Inteligencia Artificial busca construir dichos artefactos; es un campo cuyas ideas y puntos de vista se inspiran en varias disciplinas, por ejemplo: la existencia de una mente física y la forma de establecer conexiones lógicas entre metas y acciones, son materia de la Filosofía; las respuestas sobre por qué los humanos y los animales se comportan de la manera en que lo hacen, han sido extraídas de la Psicología; y la conclusión de que un conjunto de células simples puede conducir al pensamiento, la acción y la conciencia, se logró a través de importantes avances en Neurociencia. Por otro lado, para formalizar estas ideas, la Inteligencia Artificial desarrolla algoritmos basados ​​en cuatro áreas fundamentales de las matemáticas: Lógica, Computación, Probabilidad y Economía.</p>
+
+<p>La lógica desarrollada por George Bool en 1847 está detrás de todos los sistemas inteligentes de hoy en día; ésta área del conocimiento proporciona los mecanismos de razonamiento que, en teoría, pueden resolver cualquier problema descrito en términos formales. Sin embargo, existe una gran diferencia entre resolver un problema en teoría y resolverlo en la práctica, por lo que es importante hasta dónde puede llegar la lógica en la vida real.</p>
+
+<p>Para encontrar los límites de la lógica, llega otra área de conocimiento: la teoría de la computación. Personajes como Kurt Gödel y Alan Turing nos ayudaron a identificar qué problemas pueden ser resueltos por una máquina y a estimar cuántos recursos computacionales puede llegar a consumir un problema.</p>
+
+<p>Aún con todos estos avances, construir máquinas inteligentes seguía siendo un gran reto debido a que vivimos en un mundo que cambia constante e inesperadamente. Por esta razón, la inteligencia artificial utiliza muchas herramientas provenientes de la teoría de la probabilidad, por ejemplo, la ley de Bayes (sí, eso que aprendiste en la preparatoria y pensaste que solo servía para calcular qué tan probable es que te salga un as de corazones dado que juegas poker con una baraja completa) es el mecanismo que siguen los robots hoy en día para integrar evidencia y construir “modelos” del mundo que los rodea.</p>
+
+<p>¡Pero aún hay más! para que un robot pueda actuar por si mismo, es necesario estudiar cómo tomar decisiones que conduzcan a resultados aceptables. Por esta razón, la inteligencia artificial también hace uso de conocimientos en economía (cómo maximizar funciones de recompensa), teoría de juegos (cómo actuar cuando terceros pueden modificar el curso de acción), e investigación de operaciones (cómo tomar decisiones cuando los beneficios esperados no son inmediatos).</p>
+
+<p>Hay un largo camino por recorrer antes de que las computadoras puedan imitar todas las habilidades del cerebro humano; sin embargo, se han dado grandes pasos en la última década, por ejemplo, avances en Deep Reinforcement Learning (algoritmos que hacen uso de cantidades masivas de datos para permitir a los robots descubrir, por simple experimentación, cómo realizar actividades que ningún programador podría enseñarles) hoy logran hazañas que se creían imposibles, como derrotar a un campeón mundial de <a href="https://www.youtube.com/watch?v=WXuK6gekU1Y">Go</a>.</p>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=Las matemáticas detrás de un robot inteligente&url=http://localhost:4000/people-cs/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/people-cs/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/people-cs/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#math" class="tag">&#35; math</a>
+          
+        </div>
+      </div>
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>

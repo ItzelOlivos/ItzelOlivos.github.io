@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Inteligencia Artificial, De Hollywood a la vida real - Itzel Olivos-Castillo</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Itzel Olivos-Castillo" property="og:site_name">
+  
+    <meta content="Inteligencia Artificial, De Hollywood a la vida real" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="spanish" property="og:description">
+  
+  
+    <meta content="http://localhost:4000/movies-ai/" property="og:url">
+  
+  
+    <meta content="2019-12-01T15:00:00-06:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+  
+  
+    <meta content="http://localhost:4000/assets/img/movies-ia.png" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="artificial intelligence" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@_ItzelCoral">
+  
+    <meta name="twitter:title" content="Inteligencia Artificial, De Hollywood a la vida real">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/movies-ai/">
+  
+  
+    <meta name="twitter:description" content="spanish">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/movies-ia.png">
+  
+
+	<meta name="description" content="spanish">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-touch-icon-144x144.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Lato:300,400,700&display=swap" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$$','$$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\(","\\)"] ],
+        },
+        TeX: {
+          Macros: {
+            bra: ["\\langle{#1}|", 1],
+            ket: ["|{#1}\\rangle", 1],
+            braket: ["\\langle{#1}\\rangle", 1],
+            bk: ["\\langle{#1}|{#2}|{#3}\\rangle", 3]
+         }
+       }
+      });
+    </script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML' async></script>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <script type="text/javascript">
+  function dispProjects() {
+    document.getElementById('dispProj').style.display = 'flex';
+    document.getElementById('dispPosts').style.display = 'none';
+    document.getElementById('dispNews').style.display = 'none';
+
+    document.getElementById('btnProjects').style.backgroundColor = 'black';
+    document.getElementById('btnProjects').style.color = 'white';
+    document.getElementById('btnPosts').style.backgroundColor = 'white'
+    document.getElementById('btnPosts').style.color = 'black';
+    document.getElementById('btnNews').style.backgroundColor = 'white';
+    document.getElementById('btnNews').style.color = 'black';
+  }
+  function dispPosts() {
+    document.getElementById('dispProj').style.display = 'none';
+    document.getElementById('dispPosts').style.display = 'flex';
+    document.getElementById('dispNews').style.display = 'none';
+
+    document.getElementById('btnProjects').style.backgroundColor = 'white';
+    document.getElementById('btnProjects').style.color = 'black';
+    document.getElementById('btnPosts').style.backgroundColor = 'black';
+    document.getElementById('btnPosts').style.color = 'white';
+    document.getElementById('btnNews').style.backgroundColor = 'white';
+    document.getElementById('btnNews').style.color = 'black';
+  }
+  function dispNews() {
+    document.getElementById('dispProj').style.display = 'none';
+    document.getElementById('dispPosts').style.display = 'none';
+    document.getElementById('dispNews').style.display = 'flex';
+
+    document.getElementById('btnProjects').style.backgroundColor = 'white';
+    document.getElementById('btnProjects').style.color = 'black';
+    document.getElementById('btnPosts').style.backgroundColor = 'white';
+    document.getElementById('btnPosts').style.color = 'black';
+    document.getElementById('btnNews').style.backgroundColor = 'black';
+    document.getElementById('btnNews').style.color = 'white';
+
+  }
+</script>
+
+<aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/itzel.jpg" alt="Itzel Olivos-Castillo"></a>
+      </div>
+      <div class="author-name">Itzel Olivos-Castillo</div>
+      <p>I am ... short bio</p>
+    </div>
+    <div class="about">
+      <button type="button" id="btnProjects" value="Projects" onclick="dispProjects()"
+              style="background-color: black; border-color: black; color: white">Projects</button>
+      <button type="button" id="btnPosts" value="Posts" onclick="dispPosts()"
+              style="background-color: white; border-color: black">Posts</button>
+      <button type="button" id="btnNews" value="News" onclick="dispNews()"
+              style="background-color: white; border-color: black">News</button>
+    </div>
+
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://twitter.com/_ItzelCoral" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/ItzelOlivos" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:itzel@rice.edu"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2022 &copy; Itzel Olivos-Castillo</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src=/assets/img/movies-ia.png alt="Inteligencia Artificial, De Hollywood a la vida real">
+        
+      </figure>
+    </div> <!-- End Page Cover Image -->
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">Inteligencia Artificial, De Hollywood a la vida real</h1>
+        <div class="page-date"><span>2019, Dec 01&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <p>“Porque te tengo y no, porque te pienso, porque la noche está de ojos abiertos… te pienso” parafraseando al poeta Benedetti y recordando las muchas canciones de amor y desamor que me acompañan cuando manejo, creo que los humanos pasamos demasiado tiempo haciendo una actividad que es tan sutil como respirar y a la vez tan compleja que usa el motor de razonamiento más sofisticado y adaptable conocido hasta ahora: el cerebro humano.</p>
+
+<p>Pero ¿qué es exactamente pensar? Es difícil dar una definición precisa porque hay demasiados mecanismos involucrados. Cuando la gente me pregunta, me gusta decir que “pensar” es la habilidad de anticipar las consecuencias de cualquier acción sin necesidad de llevarla a cabo. Sin embargo, pensar involucra mucho más: es una habilidad cognitiva que inicia la interacción billones de neuronas en nuestro cerebro. Ya que pensar es muy complejo, a veces me pregunto si los seres humanos somos las únicas criaturas capaces de observar el mundo que nos rodea,  sintetizar información y planear estrategias para resolver problemas. Hoy en día, es sabido que otros animales también tienen la habilidad de pensar, incluso, según investigadores de la Sociedad de Biología en Praga, ¡las plantas pueden pensar!… ¿será que los robots algún día también podrán?</p>
+
+<p>Desde 1970, la industria cinematográfica nos hizo amar a robots buenos y gentiles, como C-3PO y R2-D2, ambos personajes emblemáticos de Star Wars. Más tarde, en 1984, sagas como Terminator nos revelaron un futuro aterrador en el que la inteligencia artificial alcanzaba un nivel de conciencia tan elevado que llegaba a la conclusión de que la raza humana debería ser erradicada. Aunque historias como éstas alarmaron a la sociedad de los 80’s, la tecnología evolucionó rápidamente y las personas comenzaron a ver prosperidad en la automatización; poco a poco, la gente perdió el miedo a ser remplazada por máquinas y comenzamos a imaginar robots que, no solo serían capaces de realizar tareas de forma automática, sino que pensarían, sentirían, crearían e incluso evolucionarían hasta convertirse en una nueva especie.</p>
+
+<p>Quién puede olvidar a David, el mecha de la empresa Cybertronics que desarrolló un lazo de unión que solo existe entre padres e hijos. O qué tal Wall-E, el robot inteligente que, después de pasar 700 años limpiando la Tierra, se enamora de EVA, un robot más avanzado que visita el planeta en busca de vida. Películas como Her, Big Hero, o Chappie, nos muestran que la ciencia no se detendrá hasta dar vida a un muñeco de madera, tal como deseó Geppetto con todo su corazón. Sin embargo, estamos muy lejos de interactuar con un sistema operativo tan avanzado que consiga enamorarnos, muy lejos de tener en casa a un robot como Baymax que cuide nuestra salud 24/7, y muy lejos de poder trasladar nuestra mente a una máquina.</p>
+
+<p>No obstante, la tecnología avanza velozmente: hoy en día, es posible equipar a los robots con memoria suficiente para almacenar más datos de los que nuestro cerebro puede almacenar, hemos desarrollado microchips que procesan información con una velocidad que excede los límites de la mente humana, y concebimos sensores cuya precisión es muchas veces mayor a la de nuestros sentidos… entonces ¿por qué seguimos muy lejos de diseñar a  un autómata, como Sonny en Yo Robot, que pueda sentir, soñar y convertirse en el líder de una nueva raza? Una razón puede ser que no todo en este mundo es computable: estados de la mente como la euforia, el miedo, la duda, o la ira no son cuantitativos y, por tanto, aún no sabemos exactamente cómo lidiar con ellos. Además, aún cuando nuestros “Pinochos” hoy aparentan pensar, sus pensamientos siguen siendo mecánicos; a nuestros robots les hace falta un don que, a mí parecer, es exclusivamente humano: CREATIVIDAD. Equipados con esa cosita maravillosa que nos impulsa a reinventarnos todos los días, posiblemente los robots lograrán hazañas como las que hoy solo vislumbramos en películas.</p>
+
+<p>Entonces, ¿logremos algún día instalar la rutina “serCreativo.exe” en una máquina? yo pienso que es cuestión de tiempo, pues la investigación en neurociencia, desarrollo de software y Machine Learning continúa dando resultados prometedores; después de todo, “aunque la mente humana sea demasiado compleja para ser entendida por la misma mente humana, el deseo de intentar lo imposible es una de sus características más persistentes”.</p>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=Inteligencia Artificial, De Hollywood a la vida real&url=http://localhost:4000/movies-ai/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/movies-ai/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/movies-ai/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#artificial intelligence" class="tag">&#35; artificial intelligence</a>
+          
+        </div>
+      </div>
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>

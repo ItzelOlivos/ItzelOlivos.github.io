@@ -2,7 +2,7 @@
 layout: post
 title: Scrapping Google Scholar
 date: 2019-01-21 00:00:00 +0300
-description: # Add post description (optional)
+description: projects
 img: animation-scholar.gif # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Productivity, Workflow] # add tag

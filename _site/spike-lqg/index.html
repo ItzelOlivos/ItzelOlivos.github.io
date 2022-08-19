@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Spike-Constrained Stochastic Control - Hello, world! TBD</title>
+	<title>Spike-Constrained Stochastic Control - Itzel Olivos-Castillo</title>
 
   <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
 
-    <meta content="Hello, world! TBD" property="og:site_name">
+    <meta content="Itzel Olivos-Castillo" property="og:site_name">
   
     <meta content="Spike-Constrained Stochastic Control" property="og:title">
   
@@ -14,8 +14,7 @@
     <meta content="article" property="og:type">
   
   
-    <meta content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-" property="og:description">
+    <meta content="projects" property="og:description">
   
   
     <meta content="http://localhost:4000/spike-lqg/" property="og:url">
@@ -46,14 +45,13 @@
     <meta name="twitter:url" content="http://localhost:4000/spike-lqg/">
   
   
-    <meta name="twitter:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-">
+    <meta name="twitter:description" content="projects">
   
   
     <meta name="twitter:image:src" content="http://localhost:4000/assets/img/animation-spikes.gif">
   
 
-	<meta name="description" content="">
+	<meta name="description" content="projects">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta property="og:image" content="">
@@ -97,15 +95,64 @@
 <body>
 
   <div class="wrapper">
-    <aside class="sidebar">
+    <script type="text/javascript">
+  function dispProjects() {
+    document.getElementById('dispProj').style.display = 'flex';
+    document.getElementById('dispPosts').style.display = 'none';
+    document.getElementById('dispNews').style.display = 'none';
+
+    document.getElementById('btnProjects').style.backgroundColor = 'black';
+    document.getElementById('btnProjects').style.color = 'white';
+    document.getElementById('btnPosts').style.backgroundColor = 'white'
+    document.getElementById('btnPosts').style.color = 'black';
+    document.getElementById('btnNews').style.backgroundColor = 'white';
+    document.getElementById('btnNews').style.color = 'black';
+  }
+  function dispPosts() {
+    document.getElementById('dispProj').style.display = 'none';
+    document.getElementById('dispPosts').style.display = 'flex';
+    document.getElementById('dispNews').style.display = 'none';
+
+    document.getElementById('btnProjects').style.backgroundColor = 'white';
+    document.getElementById('btnProjects').style.color = 'black';
+    document.getElementById('btnPosts').style.backgroundColor = 'black';
+    document.getElementById('btnPosts').style.color = 'white';
+    document.getElementById('btnNews').style.backgroundColor = 'white';
+    document.getElementById('btnNews').style.color = 'black';
+  }
+  function dispNews() {
+    document.getElementById('dispProj').style.display = 'none';
+    document.getElementById('dispPosts').style.display = 'none';
+    document.getElementById('dispNews').style.display = 'flex';
+
+    document.getElementById('btnProjects').style.backgroundColor = 'white';
+    document.getElementById('btnProjects').style.color = 'black';
+    document.getElementById('btnPosts').style.backgroundColor = 'white';
+    document.getElementById('btnPosts').style.color = 'black';
+    document.getElementById('btnNews').style.backgroundColor = 'black';
+    document.getElementById('btnNews').style.color = 'white';
+
+  }
+</script>
+
+<aside class="sidebar">
   <header>
     <div class="about">
       <div class="cover-author-image">
-        <a href="/"><img src="/assets/img/itzel.jpg" alt="Itzel Olivos"></a>
+        <a href="/"><img src="/assets/img/itzel.jpg" alt="Itzel Olivos-Castillo"></a>
       </div>
-      <div class="author-name">Itzel Olivos</div>
+      <div class="author-name">Itzel Olivos-Castillo</div>
       <p>I am ... short bio</p>
     </div>
+    <div class="about">
+      <button type="button" id="btnProjects" value="Projects" onclick="dispProjects()"
+              style="background-color: black; border-color: black; color: white">Projects</button>
+      <button type="button" id="btnPosts" value="Posts" onclick="dispPosts()"
+              style="background-color: white; border-color: black">Posts</button>
+      <button type="button" id="btnNews" value="News" onclick="dispNews()"
+              style="background-color: white; border-color: black">News</button>
+    </div>
+
   </header> <!-- End Header -->
   <footer>
     <section class="contact">
@@ -115,13 +162,7 @@
           <li><a href="https://twitter.com/_ItzelCoral" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
         
         
-          <li><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-        
-        
           <li class="github"><a href="http://github.com/ItzelOlivos" target="_blank"><i class="fa fa-github"></i></a></li>
-        
-        
-          <li class="linkedin"><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
         
         
           <li class="email"><a href="mailto:itzel@rice.edu"><i class="fa fa-envelope-o"></i></a></li>
@@ -129,7 +170,7 @@
       </ul>
     </section> <!-- End Section Contact -->
     <div class="copyright">
-      <p>2022 &copy; Itzel Olivos</p>
+      <p>2022 &copy; Itzel Olivos-Castillo</p>
     </div>
   </footer> <!-- End Footer -->
 </aside> <!-- End Sidebar -->
@@ -194,7 +235,6 @@
 </article> <!-- End Article Page -->
 
 </div>
-
   </div>
   
   <script>

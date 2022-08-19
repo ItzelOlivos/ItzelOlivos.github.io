@@ -2,7 +2,7 @@
 layout: post
 title: Tackling the Contention Resolution Problem
 date: 2019-02-28 00:00:00 +0300
-description: # Add post description (optional)
+description: projects
 img: animation-goal.gif # Add image post (optional)
 tags: [Algorithms, Optimization, Randomness] # add tag
 ---

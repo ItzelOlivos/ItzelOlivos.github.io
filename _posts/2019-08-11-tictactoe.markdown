@@ -2,7 +2,7 @@
 layout: post
 title: Q-learning Masters TicTacToe
 date: 2019-08-11 00:00:00 +0300
-description: # Add post description (optional)
+description: projects
 img: animation-tictactoe.gif # Add image post (optional)
 tags: [Programming, Learn] # add tag
 ---
