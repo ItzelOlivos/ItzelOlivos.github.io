@@ -3,7 +3,7 @@ layout: post
 title: Inteligencia Artificial, De Hollywood a la vida real
 date: 2018-12-02 00:00:00 +0300
 description: spanish
-img: movies-ia.png
+img: movies-ia.pdf
 tags: [artificial intelligence] # add tag
 ---
 “Porque te tengo y no, porque te pienso, porque la noche está de ojos abiertos… te pienso” parafraseando al poeta Benedetti y recordando las muchas canciones de amor y desamor que me acompañan cuando manejo, creo que los humanos pasamos demasiado tiempo haciendo una actividad que es tan sutil como respirar y a la vez tan compleja que usa el motor de razonamiento más sofisticado y adaptable conocido hasta ahora: el cerebro humano.

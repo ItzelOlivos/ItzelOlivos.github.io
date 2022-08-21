@@ -3,7 +3,7 @@ layout: post
 title: Robots que juegan "Adivina Quién"
 date: 2021-03-11 00:00:00 +0300
 description: spanish
-img: adivina.jpg
+img: adivina.pdf
 tags: [deep learning] # add tag
 ---
 Reinforcement Learning (RL) se ha convertido en la bala de plata detrás de muchos avances en robótica; hoy en día, por ejemplo, es común ver robots autónomos que aprenden, mediante RL, cómo desarrollar tareas esenciales en los almacenes de Amazon (mira [esto](https://www.youtube.com/watch?v=PC-9HYJ1nCI)!). No obstante, los algoritmos de tipo RL requieren que un humano experto diseñe una función de recompensa capaz de codificar el objetivo de la tarea. ¡Esto suena súper raro! pero como los robots no hablan ni español, ni inglés, ni chino, ¿de qué otra manera podríamos hacerles saber qué es exactamente lo que queremos que hagan?

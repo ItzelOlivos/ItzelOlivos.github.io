@@ -3,7 +3,7 @@ layout: post
 title: Aprendiendo a andar en bici sin leer el manual
 date: 2018-06-10 00:00:00 +0300
 description: spanish
-img: intro-rl.jpg
+img: intro-rl.pdf
 tags: [reinforcement learning] # add tag
 ---
 ¿Por qué es fácil andar en bicicleta pero difícil explicarle a un novato cómo debería mover cada uno de sus musculitos para completar un recorrido? Una posible explicación es que este tipo de actividades, que aparentan ser simples e intuitivas, son difíciles de describir mediante una serie de instrucciones detalladas. Afortunadamente, los humanos no aprendemos a andar en bicicleta leyendo manuales exhaustivos, simplemente lo intentamos, nos tropezamos, nos sobamos y continuamos practicando hasta lograrlo. Este proceso de aprendizaje, característico en humanos y otros animales, es una habilidad cognitiva que la inteligencia artificial busca imitar que las máquinas puedan descubrir cómo alcanzar objetivos complejos a través de un proceso de ensayo y error.

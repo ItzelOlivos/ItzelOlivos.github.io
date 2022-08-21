@@ -3,7 +3,7 @@ layout: post
 title: Transmitiendo en 4K con ayuda de Deep Learning
 date: 2020-09-21 00:00:00 +0300
 description: spanish
-img: liveNAS.png
+img: liveNAS.pdf
 tags: [deep learning] # add tag
 ---
 Transmitir en vivo está de moda y ¡qué mejor que hacerlo en 4K!; sin embargo, el ancho de banda disponible en dispositivos móviles puede convertirse en un obstáculo difícil de superar. Para resolver este problema, investigadores del Korea Advanced Institute of Science and Technology proponen una nueva arquitectura cliente-servidor llamada liveNAS. La idea es permitir al cliente (nosotros) transmitir video con la calidad que permite su ancho de banda y pedirle a un servidor (Amazon web services, por ejemplo) que escale los cuadros de video usando una red neuronal que continuamente aprende a mapear imágenes de baja a alta resolución.

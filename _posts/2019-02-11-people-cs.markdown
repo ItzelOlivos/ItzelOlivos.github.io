@@ -3,7 +3,7 @@ layout: post
 title: Las matemáticas detrás de un robot inteligente
 date: 2019-02-11 00:00:00 +0300
 description: spanish
-img: people-cs.png
+img: people-cs.pdf
 tags: [math] # add tag
 ---
 Llamamos a nuestra especie Homo Sapiens (del latín ser humano sabio) porque nuestra mente es el modelo de inteligencia más poderoso conocido hasta ahora. Sorprendentemente, incluso con todo ese poder que nos otorgó la naturaleza, seguimos preguntándonos cómo es que una máquina biológica, compuesta solo por billones de moléculas independientes que interactúan siguiendo sencillas reglas físicas y químicas, puede pensar, comportarse racionalmente y desarrollar conciencia.

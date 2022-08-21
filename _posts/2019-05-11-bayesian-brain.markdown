@@ -3,7 +3,7 @@ layout: post
 title: Cerebros Bayesianos
 date: 2019-05-11 00:00:00 +0300
 description: spanish
-img: bayesian-brain.png
+img: bayesian-brain.pdf
 tags: [neuroscience] # add tag
 ---
 Los humanos somos capaces de sobrevivir en un mundo lleno de incertidumbre; por ejemplo, ¿cómo es que podemos levantarnos a media noche y caminar en penumbras hasta la cocina para beber agua? Para entender cómo es que nuestro cerebro lidia con la incertidumbre durante la ejecución de tareas que requieren tomar decisiones de manera secuencial, el Doctor Rajesh Rao, en la Universidad de Washington, propone estudiar cómo es que una red neuronal biológica podría implementar los algoritmos con los que un agente artificial (como un robot) resuelve tareas de manera autónoma.
