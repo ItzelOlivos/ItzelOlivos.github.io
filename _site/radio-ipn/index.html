@@ -2,36 +2,36 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Transmitiendo en 4K con ayuda de Deep Learning - Itzel Olivos-Castillo</title>
+	<title>Radio IPN interviews - Itzel Olivos-Castillo</title>
 
   <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
 
     <meta content="Itzel Olivos-Castillo" property="og:site_name">
   
-    <meta content="Transmitiendo en 4K con ayuda de Deep Learning" property="og:title">
+    <meta content="Radio IPN interviews" property="og:title">
   
   
     <meta content="article" property="og:type">
   
   
-    <meta content="spanish" property="og:description">
+    <meta content="news" property="og:description">
   
   
-    <meta content="http://localhost:4000/live-nas/" property="og:url">
+    <meta content="http://localhost:4000/radio-ipn/" property="og:url">
   
   
-    <meta content="2020-09-20T16:00:00-05:00" property="article:published_time">
+    <meta content="2022-05-30T16:00:00-05:00" property="article:published_time">
     <meta content="http://localhost:4000/about/" property="article:author">
   
   
-    <meta content="http://localhost:4000/assets/img/liveNAS.pdf" property="og:image">
+    <meta content="http://localhost:4000/assets/img/external-radio-ipn.png" property="og:image">
   
   
     
   
   
     
-    <meta content="deep learning" property="article:tag">
+    <meta content="STEM" property="article:tag">
     
   
 
@@ -39,19 +39,19 @@
     <meta name="twitter:site" content="@">
     <meta name="twitter:creator" content="@_ItzelCoral">
   
-    <meta name="twitter:title" content="Transmitiendo en 4K con ayuda de Deep Learning">
+    <meta name="twitter:title" content="Radio IPN interviews">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/live-nas/">
+    <meta name="twitter:url" content="http://localhost:4000/radio-ipn/">
   
   
-    <meta name="twitter:description" content="spanish">
+    <meta name="twitter:description" content="news">
   
   
-    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/liveNAS.pdf">
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/external-radio-ipn.png">
   
 
-	<meta name="description" content="spanish">
+	<meta name="description" content="news">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta property="og:image" content="">
@@ -185,40 +185,28 @@
   <div class="page-content">
     
       
-        <div class="page-cover-image">
-          <figure>
-            <img class="page-image" src=/assets/img/liveNAS.pdf alt="Transmitiendo en 4K con ayuda de Deep Learning">
-            
-          </figure>
-        </div> <!-- End Page Cover Image -->
+        <meta http-equiv="Refresh" content="0; url='https://twitter.com/RadioIPNOficial/status/1531704566139396102'" />
+        <!-- <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FDESPOLedomex%2Fvideos%2F185478939693483%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>-->
       
     
     <div class="wrap-content">
       <header class="header-page">
-        <h1 class="page-title">Transmitiendo en 4K con ayuda de Deep Learning</h1>
-        <div class="page-date"><span>2020, Sep 20&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+        <h1 class="page-title">Radio IPN interviews</h1>
+        <div class="page-date"><span>2022, May 30&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
-      <p>Transmitir en vivo está de moda y ¡qué mejor que hacerlo en 4K!; sin embargo, el ancho de banda disponible en dispositivos móviles puede convertirse en un obstáculo difícil de superar. Para resolver este problema, investigadores del Korea Advanced Institute of Science and Technology proponen una nueva arquitectura cliente-servidor llamada liveNAS. La idea es permitir al cliente (nosotros) transmitir video con la calidad que permite su ancho de banda y pedirle a un servidor (Amazon web services, por ejemplo) que escale los cuadros de video usando una red neuronal que continuamente aprende a mapear imágenes de baja a alta resolución.</p>
-
-<p>El principal reto detrás de esta idea es implementar un algoritmo capaz de aprender de manera continua y adaptarse a los cambios (casi siempre inesperados) del mundo real, esta es la razón por la que la robótica, por ejemplo, es una de las últimas fronteras en el aprendizaje automático. Así pues, la propuesta de LiveNAS para entrenar una red neuronal artificial en tiempo (casi) real es explotar la redundancia en las imágenes que nos rodean (te explico esto más adelante) y el poder del cómputo en paralelo.</p>
-
-<p>El primer componente de esta arquitectura es el “Patch sampler”. La tarea de este componente es determinar qué fragmentos de los fotogramas que se desean transmitir serán difíciles de escalar a alta resolución. Para lograr esto: 1) Se comprime el fotograma original, se descomprime y se mide qué tanto se distorsiono después de este proceso, 2) El fotograma original se divide en muchos pedacitos (parches), se selecciona uno al azar, se comprime, se descomprime y se mide nuevamente qué tanto se distorsionó, 3) Si se detecta que el parche se distorsionó mucho más que el fotograma completo, éste se etiqueta como una “muestra interesante”, 4) Los pasos 2 y 3 se repiten hasta juntar 10 muestras interesantes y se envían al servidor. Del lado del servidor, el componente “Content-adaptive trainer” consume las muestras interesantes y ajusta los parámetros de una red neuronal artificial cuyo objetivo es aprender a escalar imágenes de baja a alta resolución.</p>
-
-<p>Enviar solo 10 parchecitos para alimentar a la red neuronal en lugar del fotograma completo reduce considerablemente el tiempo de entrenamiento. Esta idea funciona porque el mundo que nos rodea es ¡súper redundante! Como podemos ver en la siguiente secuencia de fotogramas, pixeles de colores similares aparecen juntos en grandes áreas dentro del fotograma y permanecen juntos en fotogramas subsecuentes; esta redundancia hace que las partes más informativas de las imágenes del mundo que nos rodea sean los bordes (no por nada nuestros ojitos evolucionaron para detectar bordes, aprende más <a href="https://www.sciencedirect.com/science/article/pii/S0042698997001211">aquí</a>).</p>
-
-<p>Finalmente, la arquitectura consider un “Super-resolution processor” del lado del servidor; este componente cuenta con GPUs para procesar varios fotogramas simultáneamente. El resultado final es un escalamiento automático de imágenes tan veloz que da la impresión al usuario final (followers de Tik Tok, por ejemplo) de estar consumiendo de video en 4K a pesar de las fallas de origen.</p>
-
-<p>Si quieres leer el artículo completo, éste fue publicado en Julio 2020 para the Annual conference of the ACM Special Interest Group on Data Communication on the applications, technologies, architectures, and protocols for computer communication (SIGCOMM ’20). Encuéntralo <a href="https://dl.acm.org/doi/10.1145/3387514.3405856">aquí</a>!</p>
+      <p>Breef description.Platicaremos con la Maestra en Ciencias Itzel Coral Olivos Castillo, egresada de la 
+@Upiita_Ipn y del @CIC_IPN_OFICIAL , sobre su experiencia en #EstadosUnidos como estudiante del Doctorado en la Rice University.
+ (warning: link to external website)</p>
 
       <div class="page-footer">
         <div class="page-share">
           <h4>Share it on:</h4>
-          <a href="https://twitter.com/intent/tweet?text=Transmitiendo en 4K con ayuda de Deep Learning&url=http://localhost:4000/live-nas/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
-          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/live-nas/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://twitter.com/intent/tweet?text=Radio IPN interviews&url=http://localhost:4000/radio-ipn/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/radio-ipn/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
         </div>
         <div class="page-tag">
           
-            <a href="/tags#deep learning" class="tag">&#35; deep learning</a>
+            <a href="/tags#STEM" class="tag">&#35; STEM</a>
           
         </div>
       </div>

@@ -8,14 +8,19 @@ layout: main
 <article class="article-page">
   <div class="page-content">
     {% if page.img %}
-    <div class="page-cover-image">
-      <figure>
-        <img class="page-image" src={{ "/assets/img/" | prepend: site.baseurl | append : page.img}} alt="{{page.title}}">
-        {% if page.fig-caption %}
-          <figcaption>{{page.fig-caption}}</figcaption>
-        {% endif %}
-      </figure>
-    </div> <!-- End Page Cover Image -->
+      {% if page.img contains 'external' %}
+        <meta http-equiv="Refresh" content="0; url='{{page.exurl}}'" />
+        <!-- <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FDESPOLedomex%2Fvideos%2F185478939693483%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>-->
+      {% else %}
+        <div class="page-cover-image">
+          <figure>
+            <img class="page-image" src={{ "/assets/img/" | prepend: site.baseurl | append : page.img}} alt="{{page.title}}">
+            {% if page.fig-caption %}
+              <figcaption>{{page.fig-caption}}</figcaption>
+            {% endif %}
+          </figure>
+        </div> <!-- End Page Cover Image -->
+      {% endif %}
     {% else %}
     {% endif %}
     <div class="wrap-content">
