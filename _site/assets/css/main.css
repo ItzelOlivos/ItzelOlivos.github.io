@@ -98,11 +98,11 @@ pre {
  */
 a {
   background-color: transparent;
+  text-decoration: none;
   /* 1 */
   -webkit-text-decoration-skip: objects;
   /* 2 */
 }
-
 /**
  * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
