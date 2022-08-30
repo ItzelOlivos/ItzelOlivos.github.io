@@ -95,6 +95,7 @@
     document.getElementById('dispProj').style.display = 'flex';
     document.getElementById('dispPosts').style.display = 'none';
     document.getElementById('dispNews').style.display = 'none';
+    document.getElementById('dispHobbies').style.display = 'none';
 
     document.getElementById('btnProjects').style.backgroundColor = 'black';
     document.getElementById('btnProjects').style.color = 'white';
@@ -102,11 +103,14 @@
     document.getElementById('btnPosts').style.color = 'black';
     document.getElementById('btnNews').style.backgroundColor = 'white';
     document.getElementById('btnNews').style.color = 'black';
+    document.getElementById('btnHobbies').style.backgroundColor = 'white';
+    document.getElementById('btnHobbies').style.color = 'black';
   }
   function dispPosts() {
     document.getElementById('dispProj').style.display = 'none';
     document.getElementById('dispPosts').style.display = 'flex';
     document.getElementById('dispNews').style.display = 'none';
+    document.getElementById('dispHobbies').style.display = 'none';
 
     document.getElementById('btnProjects').style.backgroundColor = 'white';
     document.getElementById('btnProjects').style.color = 'black';
@@ -114,11 +118,14 @@
     document.getElementById('btnPosts').style.color = 'white';
     document.getElementById('btnNews').style.backgroundColor = 'white';
     document.getElementById('btnNews').style.color = 'black';
+    document.getElementById('btnHobbies').style.backgroundColor = 'white';
+    document.getElementById('btnHobbies').style.color = 'black';
   }
   function dispNews() {
     document.getElementById('dispProj').style.display = 'none';
     document.getElementById('dispPosts').style.display = 'none';
     document.getElementById('dispNews').style.display = 'flex';
+    document.getElementById('dispHobbies').style.display = 'none';
 
     document.getElementById('btnProjects').style.backgroundColor = 'white';
     document.getElementById('btnProjects').style.color = 'black';
@@ -126,6 +133,23 @@
     document.getElementById('btnPosts').style.color = 'black';
     document.getElementById('btnNews').style.backgroundColor = 'black';
     document.getElementById('btnNews').style.color = 'white';
+    document.getElementById('btnHobbies').style.backgroundColor = 'white';
+    document.getElementById('btnHobbies').style.color = 'black';
+  }
+  function dispHobbies() {
+    document.getElementById('dispProj').style.display = 'none';
+    document.getElementById('dispPosts').style.display = 'none';
+    document.getElementById('dispNews').style.display = 'none';
+    document.getElementById('dispHobbies').style.display = 'flex';
+
+    document.getElementById('btnProjects').style.backgroundColor = 'white';
+    document.getElementById('btnProjects').style.color = 'black';
+    document.getElementById('btnPosts').style.backgroundColor = 'white';
+    document.getElementById('btnPosts').style.color = 'black';
+    document.getElementById('btnNews').style.backgroundColor = 'white';
+    document.getElementById('btnNews').style.color = 'black';
+    document.getElementById('btnHobbies').style.backgroundColor = 'black';
+    document.getElementById('btnHobbies').style.color = 'white';
 
   }
 </script>
@@ -141,11 +165,13 @@
     </div>
     <div id='cat_buttons' class="about">
       <button type="button" id="btnProjects" value="Projects" onclick="dispProjects()"
-              style="background-color: black; border-color: black; color: white; border-width: 1px">Projects</button>&nbsp;
+              style="background-color: black; border-color: black; color: white; border-width: 1px">Code</button>&nbsp;
       <button type="button" id="btnPosts" value="Posts" onclick="dispPosts()"
               style="background-color: white; border-color: black; color: black; border-width: 1px" >Posts</button>&nbsp;
       <button type="button" id="btnNews" value="News" onclick="dispNews()"
               style="background-color: white; border-color: black; color: black; border-width: 1px">News</button>&nbsp;
+      <button type="button" id="btnHobbies" value="News" onclick="dispHobbies()"
+              style="background-color: white; border-color: black; color: black; border-width: 1px">Fun</button>&nbsp;
     </div>
 
   </header> <!-- End Header -->
@@ -195,6 +221,10 @@
     
   
     
+  
+    
+  
+    
       <article class="post">
         
           <a class="post-thumbnail" style="background-image: url(/assets/img/animation-flucking.gif)" href="/consensus/"></a>
@@ -206,6 +236,14 @@
           <span class="post-words">2 minute read</span>
         </div>
       </article>
+    
+  
+    
+  
+    
+  
+    
+  
     
   
     
@@ -231,6 +269,8 @@
     
   
     
+  
+    
       <article class="post">
         
           <a class="post-thumbnail" style="background-image: url(/assets/img/animation-tictactoe.gif)" href="/tictactoe/"></a>
@@ -242,6 +282,12 @@
           <span class="post-words">3 minute read</span>
         </div>
       </article>
+    
+  
+    
+  
+    
+  
     
   
     
@@ -268,9 +314,17 @@
   
     
   
+    
+  
 </div>
 
 <div id="dispPosts" class="child-content-box clearfix" style="display:none">
+  
+      
+  
+      
+  
+      
   
       
   
@@ -303,6 +357,12 @@
       
   
       
+  
+      
+  
+      
+  
+      
           <article class="post">
             
               <a class="post-thumbnail" style="background-image: url(/assets/img/liveNAS.pdf)" href="/live-nas/"></a>
@@ -323,6 +383,12 @@
       
   
       
+  
+      
+  
+      
+  
+      
           <article class="post">
             
               <a class="post-thumbnail" style="background-image: url(/assets/img/bayesian-brain.pdf)" href="/bayesian-brain/"></a>
@@ -334,6 +400,8 @@
               <span class="post-words">3 minute read</span>
             </div>
           </article>
+      
+  
       
   
       
@@ -378,6 +446,8 @@
               <span class="post-words">2 minute read</span>
             </div>
           </article>
+      
+  
       
   
 </div>
@@ -429,6 +499,8 @@
       
   
       
+  
+      
           <article class="post">
             
               <a class="post-thumbnail" style="background-image: url(/assets/img/external-radio-ipn.png)" href="/radio-ipn/"></a>
@@ -440,6 +512,10 @@
               <span class="post-words">1 minute read</span>
             </div>
           </article>
+      
+  
+      
+  
       
   
       
@@ -461,6 +537,8 @@
       
   
       
+  
+      
           <article class="post">
             
               <a class="post-thumbnail" style="background-image: url(/assets/img/external-presea2021.jpg)" href="/presea-edomex/"></a>
@@ -475,6 +553,36 @@
       
   
       
+          <article class="post">
+            
+              <a class="post-thumbnail" style="background-image: url(/assets/img/external-cosyne-conference-2021.png)" href="/cosyne-conference/"></a>
+            
+            <div class="post-content">
+              <h2 class="post-title"><a href="/cosyne-conference/">Poster presentation at the 2021 COSYNE Conference</a></h2>
+              <p>Spike-constrained neural control at COSYNE Breef description. Change me And include page 156!!!Pamela Ballinas te...</p>
+              <span class="post-date">2021, Feb 22&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+              <span class="post-words">1 minute read</span>
+            </div>
+          </article>
+      
+  
+      
+          <article class="post">
+            
+              <a class="post-thumbnail" style="background-image: url(/assets/img/external-tcn-conference-2021.png)" href="/TCN-conference/"></a>
+            
+            <div class="post-content">
+              <h2 class="post-title"><a href="/TCN-conference/">Short talk at the GCC Theoretical and Computational Neuroscience Conference</a></h2>
+              <p>Breef description. Change me!!!Pamela Ballinas te espera en #MiradaGlobal, en donde te invita a conocer...</p>
+              <span class="post-date">2021, Jan 28&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+              <span class="post-words">1 minute read</span>
+            </div>
+          </article>
+      
+  
+      
+  
+      
   
       
   
@@ -483,11 +591,39 @@
       
           <article class="post">
             
-              <a class="post-thumbnail" style="background-image: url(/assets/img/despedida-fgr.pdf)" href="/beca-FGR/"></a>
+              <a class="post-thumbnail" style="background-image: url(/assets/img/stem-girls.jpg)" href="/stem-girls/"></a>
             
             <div class="post-content">
-              <h2 class="post-title"><a href="/beca-FGR/">Generación Fulbright García Robles 2019</a></h2>
-              <p>Jean shorts organic cornhole, gochujang post-ironic chicharrones authentic flexitarian viral PBR&amp;B forage wolf. Man braid...</p>
+              <h2 class="post-title"><a href="/stem-girls/">STEM Camp for Girls 2019</a></h2>
+              <p>The Benjamin Franklin Library organized the first Summer Camp for Girls interested in STEM. For...</p>
+              <span class="post-date">2019, Aug 07&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+              <span class="post-words">1 minute read</span>
+            </div>
+          </article>
+      
+  
+      
+          <article class="post">
+            
+              <a class="post-thumbnail" style="background-image: url(/assets/img/feria-posgrado.jpg)" href="/posgrados-usa/"></a>
+            
+            <div class="post-content">
+              <h2 class="post-title"><a href="/posgrados-usa/">2019 EducationUSA-COMEXUS University Graduate Fair</a></h2>
+              <p>The United States-Mexico Commission for Educational and Cultural Exchange (COMEXUS) invited me to share experiences...</p>
+              <span class="post-date">2019, Jul 11&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+              <span class="post-words">1 minute read</span>
+            </div>
+          </article>
+      
+  
+      
+          <article class="post">
+            
+              <a class="post-thumbnail" style="background-image: url(/assets/img/despedida-fgr.jpg)" href="/beca-FGR/"></a>
+            
+            <div class="post-content">
+              <h2 class="post-title"><a href="/beca-FGR/">Fulbright García Robles scholarship</a></h2>
+              <p>On this unforgettable day, I officially became a Fulbright-Garcia Robles scholar! The Fulbright-Garcia Robles program...</p>
               <span class="post-date">2019, Jun 29&nbsp;&nbsp;&nbsp;—&nbsp;</span>
               <span class="post-words">1 minute read</span>
             </div>
@@ -502,6 +638,156 @@
   
       
   
+      
+  
+      
+  
+      
+  
+</div>
+
+<div id="dispHobbies" class="child-content-box clearfix" style="display:none">
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+          <article class="post">
+            
+              <a class="post-thumbnail" style="background-image: url(/assets/img/fun-jaguar.jpg)" href="/jaguar/"></a>
+            
+            <div class="post-content">
+              <h2 class="post-title"><a href="/jaguar/">Painting</a></h2>
+              <p>Jean shorts organic cornhole, gochujang post-ironic chicharrones authentic flexitarian viral PBR&amp;B forage wolf. Man braid...</p>
+              <span class="post-date">2022, Jun 20&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+              <span class="post-words">1 minute read</span>
+            </div>
+          </article>
+      
+  
+      
+  
+      
+          <article class="post">
+            
+              <a class="post-thumbnail" style="background-image: url(/assets/img/fun-engine.mov)" href="/engine/"></a>
+            
+            <div class="post-content">
+              <h2 class="post-title"><a href="/engine/">Painting</a></h2>
+              <p>Jean shorts organic cornhole, gochujang post-ironic chicharrones authentic flexitarian viral PBR&amp;B forage wolf. Man braid...</p>
+              <span class="post-date">2022, Feb 13&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+              <span class="post-words">1 minute read</span>
+            </div>
+          </article>
+      
+  
+      
+  
+      
+          <article class="post">
+            
+              <a class="post-thumbnail" style="background-image: url(/assets/img/fun-bike.jpg)" href="/lego-bike/"></a>
+            
+            <div class="post-content">
+              <h2 class="post-title"><a href="/lego-bike/">Painting</a></h2>
+              <p>Jean shorts organic cornhole, gochujang post-ironic chicharrones authentic flexitarian viral PBR&amp;B forage wolf. Man braid...</p>
+              <span class="post-date">2021, Nov 20&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+              <span class="post-words">1 minute read</span>
+            </div>
+          </article>
+      
+  
+      
+  
+      
+  
+      
+          <article class="post">
+            
+              <a class="post-thumbnail" style="background-image: url(/assets/img/fun-puzzles.pdf)" href="/3D-puzzle/"></a>
+            
+            <div class="post-content">
+              <h2 class="post-title"><a href="/3D-puzzle/">3D Puzzles</a></h2>
+              <p>Jean shorts organic cornhole, gochujang post-ironic chicharrones authentic flexitarian viral PBR&amp;B forage wolf. Man braid...</p>
+              <span class="post-date">2021, Mar 03&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+              <span class="post-words">1 minute read</span>
+            </div>
+          </article>
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+          <article class="post">
+            
+              <a class="post-thumbnail" style="background-image: url(/assets/img/fun-elephant.jpg)" href="/paint-elephant/"></a>
+            
+            <div class="post-content">
+              <h2 class="post-title"><a href="/paint-elephant/">Painting</a></h2>
+              <p>Jean shorts organic cornhole, gochujang post-ironic chicharrones authentic flexitarian viral PBR&amp;B forage wolf. Man braid...</p>
+              <span class="post-date">2019, Oct 31&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+              <span class="post-words">1 minute read</span>
+            </div>
+          </article>
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+          <article class="post">
+            
+              <a class="post-thumbnail" style="background-image: url(/assets/img/fun-quesito.jpg)" href="/paint-quesito/"></a>
+            
+            <div class="post-content">
+              <h2 class="post-title"><a href="/paint-quesito/">Painting</a></h2>
+              <p>Jean shorts organic cornhole, gochujang post-ironic chicharrones authentic flexitarian viral PBR&amp;B forage wolf. Man braid...</p>
+              <span class="post-date">2019, Mar 10&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+              <span class="post-words">1 minute read</span>
+            </div>
+          </article>
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+          <article class="post">
+            
+              <a class="post-thumbnail" style="background-image: url(/assets/img/catrina.pdf)" href="/catrina-puzzle/"></a>
+            
+            <div class="post-content">
+              <h2 class="post-title"><a href="/catrina-puzzle/">Catrina</a></h2>
+              <p>Jean shorts organic cornhole, gochujang post-ironic chicharrones authentic flexitarian viral PBR&amp;B forage wolf. Man braid...</p>
+              <span class="post-date">2018, Jan 03&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+              <span class="post-words">1 minute read</span>
+            </div>
+          </article>
       
   
 </div>

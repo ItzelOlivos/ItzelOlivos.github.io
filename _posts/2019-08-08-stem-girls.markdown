@@ -1,0 +1,11 @@
+---
+layout: post
+title: STEM Camp for Girls 2019
+date: 2019-08-08 00:00:00 +0300
+description: news
+img: stem-girls.jpg
+tags: [sharing] # add tag
+---
+The Benjamin Franklin Library organized the first Summer Camp for Girls interested in STEM. For five days, girls between the ages of 13 and 17 learned about 3D printing, robotics, and the services offered by EducationUSA Mexico City. 
+
+During this event, I enjoyed interacting with the girls, answering their super curious questions, sharing my experiences as a Latin woman pursuing a career in science, and hopefully convincing them that women can do math! More pictures about the event can be found [here](https://www.facebook.com/BibliotecaBenjaminFranklin/photos/a.10157474602516798/10157474603911798). 

@@ -95,6 +95,7 @@
     document.getElementById('dispProj').style.display = 'flex';
     document.getElementById('dispPosts').style.display = 'none';
     document.getElementById('dispNews').style.display = 'none';
+    document.getElementById('dispHobbies').style.display = 'none';
 
     document.getElementById('btnProjects').style.backgroundColor = 'black';
     document.getElementById('btnProjects').style.color = 'white';
@@ -102,11 +103,14 @@
     document.getElementById('btnPosts').style.color = 'black';
     document.getElementById('btnNews').style.backgroundColor = 'white';
     document.getElementById('btnNews').style.color = 'black';
+    document.getElementById('btnHobbies').style.backgroundColor = 'white';
+    document.getElementById('btnHobbies').style.color = 'black';
   }
   function dispPosts() {
     document.getElementById('dispProj').style.display = 'none';
     document.getElementById('dispPosts').style.display = 'flex';
     document.getElementById('dispNews').style.display = 'none';
+    document.getElementById('dispHobbies').style.display = 'none';
 
     document.getElementById('btnProjects').style.backgroundColor = 'white';
     document.getElementById('btnProjects').style.color = 'black';
@@ -114,11 +118,14 @@
     document.getElementById('btnPosts').style.color = 'white';
     document.getElementById('btnNews').style.backgroundColor = 'white';
     document.getElementById('btnNews').style.color = 'black';
+    document.getElementById('btnHobbies').style.backgroundColor = 'white';
+    document.getElementById('btnHobbies').style.color = 'black';
   }
   function dispNews() {
     document.getElementById('dispProj').style.display = 'none';
     document.getElementById('dispPosts').style.display = 'none';
     document.getElementById('dispNews').style.display = 'flex';
+    document.getElementById('dispHobbies').style.display = 'none';
 
     document.getElementById('btnProjects').style.backgroundColor = 'white';
     document.getElementById('btnProjects').style.color = 'black';
@@ -126,6 +133,23 @@
     document.getElementById('btnPosts').style.color = 'black';
     document.getElementById('btnNews').style.backgroundColor = 'black';
     document.getElementById('btnNews').style.color = 'white';
+    document.getElementById('btnHobbies').style.backgroundColor = 'white';
+    document.getElementById('btnHobbies').style.color = 'black';
+  }
+  function dispHobbies() {
+    document.getElementById('dispProj').style.display = 'none';
+    document.getElementById('dispPosts').style.display = 'none';
+    document.getElementById('dispNews').style.display = 'none';
+    document.getElementById('dispHobbies').style.display = 'flex';
+
+    document.getElementById('btnProjects').style.backgroundColor = 'white';
+    document.getElementById('btnProjects').style.color = 'black';
+    document.getElementById('btnPosts').style.backgroundColor = 'white';
+    document.getElementById('btnPosts').style.color = 'black';
+    document.getElementById('btnNews').style.backgroundColor = 'white';
+    document.getElementById('btnNews').style.color = 'black';
+    document.getElementById('btnHobbies').style.backgroundColor = 'black';
+    document.getElementById('btnHobbies').style.color = 'white';
 
   }
 </script>
@@ -141,11 +165,13 @@
     </div>
     <div id='cat_buttons' class="about">
       <button type="button" id="btnProjects" value="Projects" onclick="dispProjects()"
-              style="background-color: black; border-color: black; color: white; border-width: 1px">Projects</button>&nbsp;
+              style="background-color: black; border-color: black; color: white; border-width: 1px">Code</button>&nbsp;
       <button type="button" id="btnPosts" value="Posts" onclick="dispPosts()"
               style="background-color: white; border-color: black; color: black; border-width: 1px" >Posts</button>&nbsp;
       <button type="button" id="btnNews" value="News" onclick="dispNews()"
               style="background-color: white; border-color: black; color: black; border-width: 1px">News</button>&nbsp;
+      <button type="button" id="btnHobbies" value="News" onclick="dispHobbies()"
+              style="background-color: white; border-color: black; color: black; border-width: 1px">Fun</button>&nbsp;
     </div>
 
   </header> <!-- End Header -->
@@ -200,15 +226,27 @@
   
     <li ><a href="#awards" class="tag">awards <span>(2)</span></a></li>
   
-    <li ><a href="#control" class="tag">control <span>(1)</span></a></li>
+    <li ><a href="#control" class="tag">control <span>(3)</span></a></li>
   
     <li ><a href="#deep+learning" class="tag">deep learning <span>(2)</span></a></li>
   
+    <li ><a href="#huichol" class="tag">huichol <span>(1)</span></a></li>
+  
+    <li ><a href="#legos" class="tag">legos <span>(1)</span></a></li>
+  
     <li ><a href="#math" class="tag">math <span>(1)</span></a></li>
   
-    <li ><a href="#neuroscience" class="tag">neuroscience <span>(1)</span></a></li>
+    <li ><a href="#mechanics" class="tag">mechanics <span>(1)</span></a></li>
+  
+    <li ><a href="#neuroscience" class="tag">neuroscience <span>(3)</span></a></li>
+  
+    <li ><a href="#painting" class="tag">painting <span>(2)</span></a></li>
+  
+    <li ><a href="#puzzles" class="tag">puzzles <span>(2)</span></a></li>
   
     <li ><a href="#reinforcement+learning" class="tag">reinforcement learning <span>(1)</span></a></li>
+  
+    <li ><a href="#sharing" class="tag">sharing <span>(2)</span></a></li>
   
     <li ><a href="#stories" class="tag">stories <span>(1)</span></a></li>
   
@@ -329,7 +367,7 @@
     </div>
     
     <div class="tag-list">
-        <span><a href="/beca-FGR/">Generación Fulbright García Robles 2019</a></span>
+        <span><a href="/beca-FGR/">Fulbright García Robles scholarship</a></span>
         <small><span>| 29 Jun 2019</span></small>
     </div>
     
@@ -340,6 +378,16 @@
     <div class="tag-list">
         <span><a href="/spike-lqg/">Spike-Constrained Stochastic Control</a></span>
         <small><span>| 15 Aug 2022</span></small>
+    </div>
+    
+    <div class="tag-list">
+        <span><a href="/cosyne-conference/">Poster presentation at the 2021 COSYNE Conference</a></span>
+        <small><span>| 22 Feb 2021</span></small>
+    </div>
+    
+    <div class="tag-list">
+        <span><a href="/TCN-conference/">Short talk at the GCC Theoretical and Computational Neuroscience Conference</a></span>
+        <small><span>| 28 Jan 2021</span></small>
     </div>
     
   
@@ -357,6 +405,24 @@
     </div>
     
   
+  <h2 id="huichol">huichol</h2>
+<!--  lists all posts corresponding to specific tag...-->
+    
+    <div class="tag-list">
+        <span><a href="/jaguar/">Painting</a></span>
+        <small><span>| 20 Jun 2022</span></small>
+    </div>
+    
+  
+  <h2 id="legos">legos</h2>
+<!--  lists all posts corresponding to specific tag...-->
+    
+    <div class="tag-list">
+        <span><a href="/lego-bike/">Painting</a></span>
+        <small><span>| 20 Nov 2021</span></small>
+    </div>
+    
+  
   <h2 id="math">math</h2>
 <!--  lists all posts corresponding to specific tag...-->
     
@@ -366,12 +432,59 @@
     </div>
     
   
+  <h2 id="mechanics">mechanics</h2>
+<!--  lists all posts corresponding to specific tag...-->
+    
+    <div class="tag-list">
+        <span><a href="/engine/">Painting</a></span>
+        <small><span>| 13 Feb 2022</span></small>
+    </div>
+    
+  
   <h2 id="neuroscience">neuroscience</h2>
 <!--  lists all posts corresponding to specific tag...-->
     
     <div class="tag-list">
+        <span><a href="/cosyne-conference/">Poster presentation at the 2021 COSYNE Conference</a></span>
+        <small><span>| 22 Feb 2021</span></small>
+    </div>
+    
+    <div class="tag-list">
+        <span><a href="/TCN-conference/">Short talk at the GCC Theoretical and Computational Neuroscience Conference</a></span>
+        <small><span>| 28 Jan 2021</span></small>
+    </div>
+    
+    <div class="tag-list">
         <span><a href="/bayesian-brain/">Cerebros Bayesianos</a></span>
         <small><span>| 10 May 2019</span></small>
+    </div>
+    
+  
+  <h2 id="painting">painting</h2>
+<!--  lists all posts corresponding to specific tag...-->
+    
+    <div class="tag-list">
+        <span><a href="/paint-elephant/">Painting</a></span>
+        <small><span>| 31 Oct 2019</span></small>
+    </div>
+    
+    <div class="tag-list">
+        <span><a href="/paint-quesito/">Painting</a></span>
+        <small><span>| 10 Mar 2019</span></small>
+    </div>
+    
+  
+  <h2 id="puzzles">puzzles</h2>
+<!--  lists all posts corresponding to specific tag...-->
+    
+    <div class="tag-list">
+        <span><a href="/3D-puzzle/">3D Puzzles</a></span>
+        <small><span>| 03 Mar 2021</span></small>
+    </div>
+    
+    <div class="tag-list">
+        <span><a href="/catrina-puzzle/">Catrina</a></span>
+        <small><span>| 03 Jan 2018</span></small>
     </div>
     
   
@@ -381,6 +494,20 @@
     <div class="tag-list">
         <span><a href="/intro-rl/">Aprendiendo a andar en bici sin leer el manual</a></span>
         <small><span>| 09 Jun 2018</span></small>
+    </div>
+    
+  
+  <h2 id="sharing">sharing</h2>
+<!--  lists all posts corresponding to specific tag...-->
+    
+    <div class="tag-list">
+        <span><a href="/stem-girls/">STEM Camp for Girls 2019</a></span>
+        <small><span>| 07 Aug 2019</span></small>
+    </div>
+    
+    <div class="tag-list">
+        <span><a href="/posgrados-usa/">2019 EducationUSA-COMEXUS University Graduate Fair</a></span>
+        <small><span>| 11 Jul 2019</span></small>
     </div>
     
   
