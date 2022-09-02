@@ -1,13 +1,18 @@
 ---
 layout: post
-title: Neuromatch tutorials 
+title: 2022 Neuromatch tutorials are live!
 date: 2022-07-11 00:00:00 +0300
 description: news
 img: neuromatch.pdf
-tags: [STEM] # add tag
+tags: [sharing] # add tag
 ---
-Jean shorts organic cornhole, gochujang post-ironic chicharrones authentic flexitarian viral PBR&B forage wolf. Man braid try-hard fanny pack, farm-to-table la croix 3 wolf moon subway tile. Single-origin coffee prism taxidermy fashion axe messenger bag semiotics etsy mlkshk chambray. Marfa lumbersexual meditation celiac. Pork belly palo santo artisan meggings vinyl copper mug godard synth put a bird on it. Cloud bread pop-up quinoa, raw denim meditation 8-bit slow-carb. Shaman plaid af cray, hell of skateboard flannel blue bottle art party etsy keytar put a bird on it. Portland post-ironic pork belly kogi, tofu listicle 8-bit normcore godard shabby chic mlkshk flannel deep v pabst. Pork belly kinfolk fingerstache lo-fi raclette. Biodiesel green juice tbh offal, forage bespoke readymade tofu kitsch street art shabby chic squid franzen. Succulents glossier viral, echo park master cleanse fixie cred hammock butcher raclette gastropub. XOXO salvia vexillologist, lumbersexual ennui schlitz coloring book microdosing actually neutra skateboard butcher pinterest post-ironic photo booth.
-Breef description. (warning: link to external website) links to Kalman filter: https://compneuro.neuromatch.io/tutorials/W3D2_HiddenDynamics/student/W3D2_Tutorial3.html Optimal control for discrete states: https://compneuro.neuromatch.io/tutorials/W3D3_OptimalControl/student/W3D3_Tutorial1.html
+Neuromatch Academy is a non-profit organization whose mission is to provide high-quality training in Theoretical and Computational Neuroscience. 
+
+Over the last three years, I have helped create interactive demos to help students learn about hidden Markov models and control theory, caption video lectures in Spanish to increase accessibility, and clarify questions during live sessions.
+
+The 2022 tutorials are ready and free for anyone who wants to learn! 
+* [Hidden Dynamics and Kalman Filters](https://compneuro.neuromatch.io/tutorials/W3D2_HiddenDynamics/student/W3D2_Tutorial3.html) 
+* [Optimal control for discrete states](https://compneuro.neuromatch.io/tutorials/W3D3_OptimalControl/student/W3D3_Tutorial1.html)
 
 
 

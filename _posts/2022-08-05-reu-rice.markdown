@@ -1,10 +1,17 @@
 ---
 layout: post
-title: SCI Symposium
+title: Research Experiences for Undergrads (REU)
 date: 2022-08-05 00:00:00 +0300
 description: news
-img: external-reu-rice.jpg
-exurl: https://news.rice.edu/news/2022/smalley-curl-institute-rewards-students-summer-research
+img: reu-rice.jpg
 tags: [stories] # add tag
 ---
-Jean shorts organic cornhole, gochujang post-ironic chicharrones authentic flexitarian viral PBR&B forage wolf. Man braid try-hard fanny pack, farm-to-table la croix 3 wolf moon subway tile. Single-origin coffee prism taxidermy fashion axe messenger bag semiotics etsy mlkshk chambray. Marfa lumbersexual meditation celiac. Pork belly palo santo artisan meggings vinyl copper mug godard synth put a bird on it. Cloud bread pop-up quinoa, raw denim meditation 8-bit slow-carb. Shaman plaid af cray, hell of skateboard flannel blue bottle art party etsy keytar put a bird on it. Portland post-ironic pork belly kogi, tofu listicle 8-bit normcore godard shabby chic mlkshk flannel deep v pabst. Pork belly kinfolk fingerstache lo-fi raclette. Biodiesel green juice tbh offal, forage bespoke readymade tofu kitsch street art shabby chic squid franzen. Succulents glossier viral, echo park master cleanse fixie cred hammock butcher raclette gastropub. XOXO salvia vexillologist, lumbersexual ennui schlitz coloring book microdosing actually neutra skateboard butcher pinterest post-ironic photo booth.
+This summer I became a mentor at Rice's REU program.
+
+This program allows undergrads to work with faculty members and graduate students on research projects.
+
+I helped mentor Jessica Opsahl-Ong, a student from the Electrical and Computer Engineering Department. I also joined a discussion panel where other fellow graduate students and I shared our experiences as research assistants with the summer interns. 
+
+To conclude the program, the interns presented their projects at the Smalley-Curl Institute (SCI) annual Summer Research Colloquium. Jessica's project: "Determining mental model of agents playing the prisoners dilemma," won the 2022 ECE/REU award!
+
+Click here to learn more about the [REU](https://reu.rice.edu/research-experiences) program and the [colloquium](https://news.rice.edu/news/2022/smalley-curl-institute-rewards-students-summer-research) 😁
