@@ -1,7 +1,7 @@
 ---
 layout: main
 ---
-<div id="dispProj" class="child-content-box clearfix" style="display:flex">
+<div id="dispProj" class="child-content-box clearfix" style="display:none">
   {% for post in paginator.posts %}
     {% if post.description == "projects" %}
       <article class="post">
@@ -39,7 +39,7 @@ layout: main
   {% endfor %}
 </div>
 
-<div id="dispNews" class="child-content-box clearfix" style="display:none">
+<div id="dispNews" class="child-content-box clearfix" style="display:flex">
   {% for post in paginator.posts %}
       {% if post.description == "news" %}
           <article class="post">

@@ -941,6 +941,12 @@ table tfoot td {
   text-align: center;
 }
 
+.about-buttons {
+  margin: 0 0 40px;
+  line-height: 200%;
+  text-align: center;
+}
+
 .about .cover-author-image {
   width: 100px;
   height: 100px;
@@ -1242,7 +1248,7 @@ a.newer-posts:hover {
   position: relative;
   padding: 0;
   margin: auto;
-  max-height: 500px;
+  max-height: 550px;
   background-color: #fafafa;
   overflow: hidden;
 }

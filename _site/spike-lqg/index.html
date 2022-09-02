@@ -33,6 +33,8 @@
     
     <meta content="control" property="article:tag">
     
+    <meta content="neuroscience" property="article:tag">
+    
   
 
     <meta name="twitter:card" content="summary">
@@ -170,13 +172,13 @@
       <div class="author-name">Itzel Olivos-Castillo</div>
       <p><br> 💼 PhD student at <a href="https://csweb.rice.edu">Rice University</a> (<a href="https://xaqlab.com">LAB-lab</a>) <br> 🏆 Fulbrighter 2019 - 2022 <br> 🎓 BSc and MSc degrees from <a href="https://www.youtube.com/watch?v=vjSRL3_3DGU&t=210s">IPN</a>, Mexico <br> ❤️ Control, RL, Neuroscience</p>
     </div>
-    <div id='cat_buttons' class="about">
+    <div id='cat_buttons' class="about-buttons">
+      <button type="button" id="btnNews" value="News" onclick="dispNews()"
+              style="background-color: black; border-color: black; color: white; border-width: 1px">News</button>&nbsp;
       <button type="button" id="btnProjects" value="Projects" onclick="dispProjects()"
-              style="background-color: black; border-color: black; color: white; border-width: 1px">Code</button>&nbsp;
+              style="background-color: white; border-color: black; color: black; border-width: 1px">Code</button>&nbsp;
       <button type="button" id="btnPosts" value="Posts" onclick="dispPosts()"
               style="background-color: white; border-color: black; color: black; border-width: 1px" >Posts</button>&nbsp;
-      <button type="button" id="btnNews" value="News" onclick="dispNews()"
-              style="background-color: white; border-color: black; color: black; border-width: 1px">News</button>&nbsp;
       <button type="button" id="btnHobbies" value="News" onclick="dispHobbies()"
               style="background-color: white; border-color: black; color: black; border-width: 1px">Fun</button>&nbsp;
     </div>
@@ -224,33 +226,71 @@
         <h1 class="page-title">Spike-Constrained Stochastic Control</h1>
         <div class="page-date"><span>2022, Aug 15&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
-      <p>what did, why matters, what was cool even if it didn’t work in the end</p>
-
-<p>We develop a version of stochastic control that accounts for computational costs in the brain.  Motor control  and  reinforcement  learning  both  appeal  to  the  conceptual  framework  of  accumulating  evidence  about the  world  and  selecting  actions  based  on  the  synthesized  information  to  maximize  total  expected  utility. Yet neither of these approaches consider the costs of performing computations.  Conversely, past studies identified metabolically efficient ways of coding sensory information, but these studies are restricted to feedforward settings and static environments, and do not consider the consequences for closed-loop control. Here we combine concepts of efficient coding with control theory to analyze Linear Quadratic Gaussian (LQG) control, a well-understood mathematical example of optimal control that combines a Kalman filter for partially observed stochastic linear dynamics of a gaussian world state, with a linear regulator that minimizes integrated quadratic state costs and action costs.  We implement the Kalman filter neurally using a dynamic Probabilistic Population Code, in which linear projections of spiking neural activity approximate the natural parameters of a Gaussian posterior over theworld state. To this framework we add a cost on the total integrated number of spikes. In the simplest version, the precision of the inference is directly proportional to the number of spikes.  This creates a trade-off: an agent can obtain more utility overall by relinquishing some task performance, if doing so saves enough spikes.  By solving this problem, we describe how the optimal spike rate varies with the properties of the system to be controlled, such as stability, process noise, and observation noise. We discuss differences between how the brain should efficiently allocate resources in a closed-loop setting compared to the conventional feedforward setting.  Overall, this work provides  a  foundation  for  a  new  type  of  bounded  rational  behavior  that  could  be  used  to  explain  suboptimal computations in the brain</p>
-
-<h2 id="methods">Methods</h2>
-<p>Computing optimal control policies in general settings is intractable; an exception is the Linear Quadratic Gaussian case where the dynamics are linear, the noise is Gaussian, and the cost function is quadratic. Under these assumptions, an agent that computes control policies using Bellman’s optimality principle and maintains beliefs using a Kalman filter is optimal. Thus, to be concrete, we analyze an LQG control task and study the performance of an agent that aims to minimize the deviation of a controllable state $s$ from a target, while also minimizing the cost of its actions $u$. The dynamics of the state $s$ are governed by the stochastic differential equation $\dot{s}<em>t = As_t + Bu_t + \eta_t$, where $A$ is the state-transition matrix, $B$ is the control-input matrix, and $\eta_t$ is additive white Gaussian noise with isotropic covariance $\Sigma</em>\eta=\sigma_\eta^2\mathbb{I}$. The cost rate, $C’_{\rm{sys}}(s, u)$, penalizes the agent as it deviates from the target state or takes large actions; the magnitudes of these penalties are determined by time-varying weights $Q^{s}_t$ and $Q^{a}_t$, respectively. <br /><br /> The starting point to solve the control task in a biologically plausible manner is to encode the probability distribution over the observations using neural activity. We assume that the brain represents probabilities over the world state using a Probabilistic Population Code (PPCs), which is a distributed neural representation that support evidence integration through linear operations and marginalization through nonlinear operations \cite{beck2011marginalization}. Accordingly, spike trains, $\boldsymbol{r}_t^{\rm in}$, emitted by an input layer of neurons with Poisson-like response variability encode observations about the Gaussian world state $s_t$. Next, the responses $\boldsymbol{r}_t^{\rm in}$ feed a recurrent layer whose firing activity, $\boldsymbol{r}_t^{\rm out} \sim {\rm Poi}(\boldsymbol{v_t})$, encodes the belief that the agent would obtain by implementing recursive Bayesian estimation based on its last observation and action executed. Finally, the agent decodes the world state $s_t$ using different projections of the activity $\boldsymbol{r}_t^{\rm out}$, that is, $p(s_t|\boldsymbol{r}_t^{\rm out}) \propto \exp\big(-\frac{1}{2}s^2_t \boldsymbol{a} \cdot \boldsymbol{r}_t^{\rm out} + s_t \boldsymbol{b} \cdot \boldsymbol{r}_t^{\rm out}\big)$. The sufficient statistics for this posterior constitute the ``belief state’’ $b_t$ of the system, such that $p(s_t|\boldsymbol{r}_t^{\rm out})=p(s_t|b_t)$.</p>
-
-<blockquote>
-  <p>Highlight note.</p>
-</blockquote>
-
-<p>The agent minimizes expected state and action cost by selecting actions $u_t = -L_t (\boldsymbol{b} \cdot \boldsymbol{r}<em>t^{\rm out}/\boldsymbol{a} \cdot \boldsymbol{r}_t^{\rm out})$, where $L_t$ is a control gain proportional to the solution of the Riccati equation $-\dot{\mathbb{S}} = Q_t^s + 2A\mathbb{S} - B^2\mathbb{S}^2/Q_t^u$. The minimal value of the integrated quadratic state and action costs, $C</em>{\rm sys}$, consists of irreducible terms that arise due to errors introduced by disturbances in the system and uncertainty in the initial state; hence, as in \cite{susemihl2014optimal}, our goal is to find neural representations that minimize the integrated estimation error $\int (B^2 \mathbb{S}_t^2 \sigma^2_t /Q^{u}_t) dt$ {\color{red}[Aren’t we trying to minimize TOTAL cost?]}. In contrast to \cite{susemihl2014optimal}, which optimizes the sensory apparatus, here we optimize the dynamic representation of the  belief state $b_t$ to minimize the task and representational costs.</p>
+      <h3 id="what-is-it-about">What is it about?</h3>
 
 <ul>
-  <li>Sample list</li>
-  <li>Another item</li>
+  <li>
+    <p>We develop a version of stochastic control that accounts for computational costs in the brain.</p>
+  </li>
+  <li>
+    <p>Combining concepts of efficient coding with control theory, we analyze Linear Quadratic Gaussian (LQG) control. LQG is a well-understood mathematical example of optimal control that combines a Kalman filter to keep track of a hidden state with a linear regulator that minimizes integrated quadratic state and action costs. When the state dynamics are linear, and all noise sources are Gaussian, this combination is your best bet!</p>
+  </li>
+  <li>
+    <p>We assume the brain encodes uncertainty using a Probabilistic Population Code (PPC), which is a distributed neural representation that support evidence integration through linear operations and marginalization through nonlinear operations</p>
+  </li>
+  <li>
+    <p>We implement the Kalman filter neurally:</p>
+
+    <ul>
+      <li>
+        <p>Spike trains emitted by a sensory layer of neurons with Poisson-like response variability encode observations about the Gaussian world state.</p>
+      </li>
+      <li>
+        <p>This neural response feeds a recurrent layer whose firing activity encodes the belief the agent would obtain by implementing recursive Bayesian estimation based on its last observation and action executed.</p>
+      </li>
+      <li>
+        <p>The agent decodes the hidden world state using different projections of the neural activity emitted by the recurrent layer.</p>
+      </li>
+      <li>
+        <p>The agent minimizes the expected total integrated state, action, and neural cost by adjusting its spike rates and control gain.</p>
+      </li>
+    </ul>
+  </li>
 </ul>
 
-<h2 id="results">Results</h2>
-<p>For PPCs using a population of neurons with dense uniformly spaced tuning curves, the expected uncertainty in the observations is approximately independent of position, and inversely proportional to the sensory gain $g^{\rm in}$. The dynamic PPC encodes beliefs given a fixed sensory gain that yields time-dependent distributions whose natural parameter, $\boldsymbol{a}!\cdot!\boldsymbol{r}<em>t^{\rm out}$, converges quickly to an equilibrium determined by properties of the system to be controlled, including open-loop stability given by the transition matrix $A$, the process noise $\Sigma</em>\eta$, and the sensory gain $g^{\rm in}$, width $w$, and spacing $\Delta \theta$ of the tuning curves. Figure \ref{Fig:Data1} shows that the optimal network uses a gain smaller than 1 to reduce its spike count while stabilizing the system through closed-loop control. The optimal recurrent gain depends on the sensory gain, with stronger inputs permitting weaker inferences. %We show that the resultant cost rate to encode observations is given by $C’<em>{\rm obs} = (\sqrt{2\pi} g^{\rm in} w/ \Delta \theta) dt$, while the cost rate to encode beliefs is $C’</em>{\rm bel} = (N\alpha_t / \sigma^2_t) dt$, where $\alpha_t$ is a baseline parameter required to shift the neural responses to ensure positive firing rates as the state changes.</p>
+<h3 id="take-away">Take away</h3>
 
-<p>We also consider an active sensing version in which the input gain $g^{\rm in}$ can change over time. Finding sequences of $g_t^{\rm in}$ that minimize $C_{\rm sys}$ subject to a budget of spikes then becomes a trajectory optimization problem. We use Deep Temporal Difference Learning \cite{mnih2015human} to compute approximately optimal sensing policies; in this setting, the agent allocates more spikes in states where making mistakes is highly punished, a strategy that is often observed in behavioral experiments, and may provide a prediction for arousal signals reflected in neural activity and pupil dilation.</p>
+<ul>
+  <li>
+    <p>In this simplest version, the precision of the observation and inferences is directly proportional to the number of spikes.</p>
+  </li>
+  <li>
+    <p>We reveal a trade-off: an agent can obtain more utility overall by relinquishing some task performance if doing so saves enough spikes.</p>
+  </li>
+  <li>
+    <p>The optimal spike rate varies with the properties of the system to be controlled (stability and signal-to-noise ratio).</p>
+  </li>
+</ul>
 
-<p>\({X}_{0}\) (works)
-\(X_0\) (works)</p>
+<h3 id="why-it-matters">Why it matters?</h3>
 
-<p>Only in line equations work. Github does not support otherwise, we had to edit head.html to modify the script that converts math, seems difficult to handle inline math \(x_0\)</p>
+<ul>
+  <li>
+    <p>Past studies have identified metabolically efficient ways of coding sensory evidence, but they are restricted to feedforward settings. It is also important to understand the consequences of closed-loop control.</p>
+  </li>
+  <li>
+    <p>This work provides a foundation for a new type of bounded rational behavior that could be used to explain suboptimal computations in the brain.</p>
+  </li>
+  <li>
+    <p>Understanding the mechanisms that give biological organisms an advantage over machines when it comes to perception and mobility can help engineer robots that are more robust, general-purpose, and energy efficient.</p>
+  </li>
+</ul>
+
+<p><br />
+<br /></p>
+<hr />
+
+<p>Code: <a href="https://github.com/ItzelOlivos?tab=repositories">Repo</a></p>
 
       <div class="page-footer">
         <div class="page-share">
@@ -261,6 +301,8 @@
         <div class="page-tag">
           
             <a href="/tags#control" class="tag">&#35; control</a>
+          
+            <a href="/tags#neuroscience" class="tag">&#35; neuroscience</a>
           
         </div>
       </div>

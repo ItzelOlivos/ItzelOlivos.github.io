@@ -4,10 +4,33 @@ title: Consensus-Based Inference and Control
 date: 2021-12-10 00:00:00 +0300
 description: projects
 img: animation-flucking.gif # Add image post (optional)
-tags: [Distributed] # add tag
+tags: [Control, Distributed, Heuristic] # add tag
 ---
-Jean shorts organic cornhole, gochujang post-ironic chicharrones authentic flexitarian viral PBR&B forage wolf. Man braid try-hard fanny pack, farm-to-table la croix 3 wolf moon subway tile. Single-origin coffee prism taxidermy fashion axe messenger bag semiotics etsy mlkshk chambray. Marfa lumbersexual meditation celiac. Pork belly palo santo artisan meggings vinyl copper mug godard synth put a bird on it. Cloud bread pop-up quinoa, raw denim meditation 8-bit slow-carb. Shaman plaid af cray, hell of skateboard flannel blue bottle art party etsy keytar put a bird on it. Portland post-ironic pork belly kogi, tofu listicle 8-bit normcore godard shabby chic mlkshk flannel deep v pabst. Pork belly kinfolk fingerstache lo-fi raclette. Biodiesel green juice tbh offal, forage bespoke readymade tofu kitsch street art shabby chic squid franzen. Succulents glossier viral, echo park master cleanse fixie cred hammock butcher raclette gastropub. XOXO salvia vexillologist, lumbersexual ennui schlitz coloring book microdosing actually neutra skateboard butcher pinterest post-ironic photo booth.
+### What is it about?
 
-Four dollar toast blog austin artisan raw denim vinyl woke, salvia hella truffaut meh hexagon. Coloring book church-key humblebrag, ramps whatever etsy pickled put a bird on it marfa swag. Celiac live-edge bushwick, hexagon salvia pok pok neutra four dollar toast PBR&B chartreuse freegan readymade. Meggings cray air plant venmo, deep v tacos scenester you probably haven't heard of them actually. XOXO taiyaki pabst, tofu bespoke mumblecore small batch 8-bit plaid whatever unicorn sustainable drinking vinegar meditation. Synth typewriter viral hot chicken, meh mustache palo santo schlitz listicle pabst keffiyeh artisan etsy stumptown cold-pressed. Occupy locavore cray irony. Chambray whatever vaporware keffiyeh heirloom vice. Single-origin coffee neutra iPhone lyft. Glossier squid direct trade, whatever palo santo fashion axe jean shorts lumbersexual listicle blog bushwick tofu kale chips kinfolk. Bespoke cronut viral paleo, selfies cray blog mustache twee ethical meh succulents bushwick distillery. Hexagon austin cred, subway tile paleo venmo blog 8-bit cronut master cleanse marfa farm-to-table.
+* This project solves a multi-agent control problem involving collision avoidance and tracking under uncertainty.
 
-Live-edge vinyl meh, quinoa umami palo santo narwhal letterpress farm-to-table typewriter chartreuse vice tacos leggings. Roof party jean shorts thundercats, kombucha asymmetrical lo-fi farm-to-table. Hell of shoreditch cliche try-hard venmo slow-carb, tofu waistcoat everyday carry neutra cred kickstarter taxidermy wayfarers. Direct trade banh mi pug skateboard banjo edison bulb. Intelligentsia cliche quinoa synth umami. Trust fund four loko hoodie paleo cray tote bag slow-carb ennui. Williamsburg food truck intelligentsia trust fund. Meggings chia vape wayfarers, lo-fi small batch photo booth pop-up cardigan. Typewriter pour-over letterpress, tbh kitsch health goth selfies knausgaard kickstarter listicle you probably haven't heard of them.
+* Scenario: A group of smart devices (green dots) need to track an entity (yellow arrow) while coordinating to avoid collisions among themselves and with a moving threat (red dot). 
+
+* To avoid the moving threat and following the target, the devices compute consensus-based estimates of the threat and target's positions using data collected locally (by its own sensors) and via neighbor-to-neighbor communication.
+
+* To follow the target and avoid collisions, the devices use Flocking. This is a form of collective behavior that emerges from local interactions of a large group of agents with a common objective. 
+
+### Take away
+
+* Centralized approaches entail significant communication overheard and rely heavily on the performance of a single device (central node). 
+
+* Hierarchical communication strategies (devices share information using a tree structure) help, but the associated risk of relying too much on the central node remains. 
+
+* Linear consensus algorithms require minimal computation, communication, and synchronization to compute averages of local quantities (for example, estimates of a target's position).
+
+* Flocking is an efficient algorithm to compute collaborative control policies.
+
+### Why it matters?
+
+* Distributed methodologies like this one can help minimize the communication and computation consumption of devices forming Wireless Sensor Networks, a technology with applicability in a wide number of monitoring applications (wildfire tracking, transportation surveillance, study of natural phenomena, etc.) 
+
+<br>
+<br>
+<hr />
+Code: [Repo](https://github.com/ItzelOlivos?tab=repositories)

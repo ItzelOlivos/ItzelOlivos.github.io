@@ -1,0 +1,46 @@
+I"E<h3 id="what-is-it-about">What is it about?</h3>
+
+<ul>
+  <li>
+    <p>This project solves a multi-agent control problem involving collision avoidance and tracking under uncertainty.</p>
+  </li>
+  <li>
+    <p>Scenario: A group of smart devices (green dots) need to track an entity (yellow arrow) while coordinating to avoid collisions among themselves and with a moving threat (red dot).</p>
+  </li>
+  <li>
+    <p>To avoid the moving threat and following the target, the devices compute consensus-based estimates of the threat and target’s positions using data collected locally (by its own sensors) and via neighbor-to-neighbor communication.</p>
+  </li>
+  <li>
+    <p>To follow the target and avoid collisions, the devices use Flocking. This is a form of collective behavior that emerges from local interactions of a large group of agents with a common objective.</p>
+  </li>
+</ul>
+
+<h3 id="take-away">Take away</h3>
+
+<ul>
+  <li>
+    <p>Centralized approaches entail significant communication overheard and rely heavily on the performance of a single device (central node).</p>
+  </li>
+  <li>
+    <p>Hierarchical communication strategies (devices share information using a tree structure) help, but the associated risk of relying too much on the central node remains.</p>
+  </li>
+  <li>
+    <p>Linear consensus algorithms require minimal computation, communication, and synchronization to compute averages of local quantities (for example, estimates of a target’s position).</p>
+  </li>
+  <li>
+    <p>Flocking is an efficient algorithm to compute collaborative control policies.</p>
+  </li>
+</ul>
+
+<h3 id="why-it-matters">Why it matters?</h3>
+
+<ul>
+  <li>Wireless Sensor Networks and the Internet of Things are useful technologies that</li>
+</ul>
+
+<p><br />
+<br /></p>
+<hr />
+
+<p>Code: <a href="https://github.com/ItzelOlivos?tab=repositories">Repo</a></p>
+:ET
