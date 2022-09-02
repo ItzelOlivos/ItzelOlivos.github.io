@@ -1,0 +1,66 @@
+I"ö<h3 id="what-is-it-about">What is it about?</h3>
+
+<ul>
+  <li>
+    <p>We develop a version of stochastic control that accounts for computational costs in the brain.</p>
+  </li>
+  <li>
+    <p>Combining concepts of efficient coding with control theory, we analyze Linear Quadratic Gaussian (LQG) control. LQG is a well-understood mathematical example of optimal control that combines a Kalman filter to keep track of a hidden state with a linear regulator that minimizes integrated quadratic state and action costs. When the state dynamics are linear, and all noise sources are Gaussian, this combination is your best bet!</p>
+  </li>
+  <li>
+    <p>We assume the brain encodes uncertainty using a Probabilistic Population Code (PPC), which is a distributed neural representation that support evidence integration through linear operations and marginalization through nonlinear operations</p>
+  </li>
+  <li>
+    <p>We implement the Kalman filter neurally:</p>
+
+    <ul>
+      <li>
+        <p>Spike trains emitted by a sensory layer of neurons with Poisson-like response variability encode observations about the Gaussian world state.</p>
+      </li>
+      <li>
+        <p>This neural response feeds a recurrent layer whose firing activity encodes the belief the agent would obtain by implementing recursive Bayesian estimation based on its last observation and action executed.</p>
+      </li>
+      <li>
+        <p>The agent decodes the hidden world state using different projections of the neural activity emitted by the recurrent layer.</p>
+      </li>
+      <li>
+        <p>The agent minimizes the expected total integrated state, action, and neural cost by adjusting its spike rates and control gain.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="take-away">Take away</h3>
+
+<ul>
+  <li>
+    <p>In this simplest version, the precision of the observation and inferences is directly proportional to the number of spikes.</p>
+  </li>
+  <li>
+    <p>We reveal a trade-off: an agent can obtain more utility overall by relinquishing some task performance if doing so saves enough spikes.</p>
+  </li>
+  <li>
+    <p>The optimal spike rate varies with the properties of the system to be controlled (stability and signal-to-noise ratio).</p>
+  </li>
+</ul>
+
+<h3 id="why-it-matters">Why it matters?</h3>
+
+<ul>
+  <li>
+    <p>Past studies have identified metabolically efficient ways of coding sensory evidence, but they are restricted to feedforward settings. It is also important to understand the consequences of closed-loop control.</p>
+  </li>
+  <li>
+    <p>This work provides a foundation for a new type of bounded rational behavior that could be used to explain suboptimal computations in the brain.</p>
+  </li>
+  <li>
+    <p>Understanding the mechanisms that give biological organisms an advantage over machines when it comes to perception and mobility can help engineer robots that are more robust, general-purpose, and energy efficient.</p>
+  </li>
+</ul>
+
+<p><br />
+<br /></p>
+<hr />
+
+<p>Code available <a href="https://github.com/ItzelOlivos/GOAL-CR">here</a></p>
+:ET

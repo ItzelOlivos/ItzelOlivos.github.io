@@ -1,0 +1,53 @@
+I"·<h3 id="what-is-it-about">What is it about?</h3>
+
+<ul>
+  <li>
+    <p>This work aims to solve the single access contention resolution problem. The problem consists of computing a symmetric policy that allows a set of nodes to access a shared resource without exchange of information among them.</p>
+  </li>
+  <li>Assumptions:
+    <ul>
+      <li>If two or more nodes attempt to access the resource simultaneously, they lock each other out and none can access the resource during the discrete time slot.</li>
+      <li>Each node needs to access the resource only once.</li>
+    </ul>
+  </li>
+  <li>
+    <p>We modeled the problem as a partially observable Markov decision process (POMDP).</p>
+  </li>
+  <li>
+    <p>We computed approximate solutions to the POMDP using Alpha-vectors and Deep Q-Learning.</p>
+  </li>
+  <li>
+    <p>We designed a greedy algorithm, GOAL-CR, that exploits the particular structure of the POMDP to compute optimal solutions in polynomial time.</p>
+  </li>
+  <li>We show how to adapt the greedy algorithm to scenarios where there is uncertainty in the initial number of nodes, to scenarios where nodes have very limited memory, and to scenarios where nodes join the network asynchronously.</li>
+</ul>
+
+<h3 id="take-away">Take away</h3>
+
+<ul>
+  <li>
+    <p>The contention resolution problem is particularly relevant in the context of Wireless Sensor Networks (WSNs). Routing in a WSN is complicated because sensors have energy constraints and they can be randomly deployed. For such scenarios, the network is periodically organized into clusters that enable hierarchical communication. Each time the clusters are reorganized, the network runs a set-up phase in which each sensor contends to send a single packet through a broadcast communication channel.</p>
+  </li>
+  <li>
+    <p>The canonical strategy to solve the problem is to let the nodes attempt to access the resource using a fixed probability of transmission. GOAL-CR substantially outperforms this strategy by making optimal use of the shared communication channel.</p>
+  </li>
+  <li>
+    <p>We formally proved that the GOAL-CR computes access policies that minimize the expected contention resolution time.</p>
+  </li>
+  <li>
+    <p>According to experiments, the performance of the greedy policies is close to that of a protocol with complete information about the exact number of nodes that have not yet accessed the resource.</p>
+  </li>
+</ul>
+
+<h3 id="why-it-matters">Why it matters?</h3>
+
+<ul>
+  <li>Minimizing the contention resolution time of the set-up phase of WSNs not only impacts metrics like channel utilization, throughput, and energy consumption, it also impacts critical metrics like the response time of the network to catastrophes like a wildfires or earthquakes</li>
+</ul>
+
+<p><br />
+<br /></p>
+<hr />
+
+<p>More details can be found <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8654626">here</a>. Code available <a href="https://github.com/ItzelOlivos/FinalProject677">here</a>.</p>
+:ET

@@ -44,4 +44,4 @@ tags: [control, neuroscience]
 <br>
 <br>
 <hr />
-Code: [Repo](https://github.com/ItzelOlivos?tab=repositories)
+Code available [here](https://github.com/ItzelOlivos/SpikeConstrainedControl)

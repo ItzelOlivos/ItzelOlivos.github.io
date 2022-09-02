@@ -8,39 +8,35 @@ tags: [Algorithms, Optimization, Randomized] # add tag
 ---
 ### What is it about?
 
-* We develop a version of stochastic control that accounts for computational costs in the brain. 
+* This work aims to solve the single access contention resolution problem. The problem consists of computing a symmetric policy that allows a set of nodes to access a shared resource without exchange of information among them. 
 
-* Combining concepts of efficient coding with control theory, we analyze Linear Quadratic Gaussian (LQG) control. LQG is a well-understood mathematical example of optimal control that combines a Kalman filter to keep track of a hidden state with a linear regulator that minimizes integrated quadratic state and action costs. When the state dynamics are linear, and all noise sources are Gaussian, this combination is your best bet!
+* Assumptions:
+    * If two or more nodes attempt to access the resource simultaneously, they lock each other out and none can access the resource during the discrete time slot. 
+    * Each node needs to access the resource only once.
 
-* We assume the brain encodes uncertainty using a Probabilistic Population Code (PPC), which is a distributed neural representation that support evidence integration through linear operations and marginalization through nonlinear operations
+* We modeled the problem as a partially observable Markov decision process (POMDP). 
 
-* We implement the Kalman filter neurally:
+* We computed approximate solutions to the POMDP using Alpha-vectors and Deep Q-Learning.
 
-    * Spike trains emitted by a sensory layer of neurons with Poisson-like response variability encode observations about the Gaussian world state. 
-  
-    * This neural response feeds a recurrent layer whose firing activity encodes the belief the agent would obtain by implementing recursive Bayesian estimation based on its last observation and action executed. 
-  
-    * The agent decodes the hidden world state using different projections of the neural activity emitted by the recurrent layer. 
-  
-    * The agent minimizes the expected total integrated state, action, and neural cost by adjusting its spike rates and control gain.
+* We designed a greedy algorithm, GOAL-CR, that exploits the particular structure of the POMDP to compute optimal solutions in polynomial time.
+
+* We show how to adapt the greedy algorithm to scenarios where there is uncertainty in the initial number of nodes, to scenarios where nodes have very limited memory, and to scenarios where nodes join the network asynchronously. 
 
 ### Take away
 
-* In this simplest version, the precision of the observation and inferences is directly proportional to the number of spikes. 
+* The contention resolution problem is particularly relevant in the context of Wireless Sensor Networks (WSNs). Routing in a WSN is complicated because sensors have energy constraints and they can be randomly deployed. For such scenarios, the network is periodically organized into clusters that enable hierarchical communication. Each time the clusters are reorganized, the network runs a set-up phase in which each sensor contends to send a single packet through a broadcast communication channel.
 
-* We reveal a trade-off: an agent can obtain more utility overall by relinquishing some task performance if doing so saves enough spikes. 
+* The canonical strategy to solve the problem is to let the nodes attempt to access the resource using a fixed probability of transmission. GOAL-CR substantially outperforms this strategy by making optimal use of the shared communication channel. 
 
-* The optimal spike rate varies with the properties of the system to be controlled (stability and signal-to-noise ratio).
+* We formally proved that the GOAL-CR computes access policies that minimize the expected contention resolution time. 
+
+* According to experiments, the performance of the greedy policies is close to that of a protocol with complete information about the exact number of nodes that have not yet accessed the resource.
 
 ### Why it matters?
 
-* Past studies have identified metabolically efficient ways of coding sensory evidence, but they are restricted to feedforward settings. It is also important to understand the consequences of closed-loop control. 
-
-* This work provides a foundation for a new type of bounded rational behavior that could be used to explain suboptimal computations in the brain.
-
-* Understanding the mechanisms that give biological organisms an advantage over machines when it comes to perception and mobility can help engineer robots that are more robust, general-purpose, and energy efficient.
+* Minimizing the contention resolution time of the set-up phase of WSNs not only impacts metrics like channel utilization, throughput, and energy consumption, it also impacts critical metrics like the response time of the network to catastrophes like a wildfires or earthquakes 
 
 <br>
 <br>
 <hr />
-Code: [Repo](https://github.com/ItzelOlivos?tab=repositories)
+More details can be found [here](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8654626). Code available [here](https://github.com/ItzelOlivos/FinalProject677).
