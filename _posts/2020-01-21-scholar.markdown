@@ -23,11 +23,11 @@ tags: [networks, scrapping] # add tag
 
 ### Why it matters?
 
-* I engineered this network to find my PhD advisor! I succeeded and found Dr Xaq Pitkow, a very active member of the scientific community who works on topics such as control theory, machine learning, and theoretical neuroscience. 
+* I engineered this network to find my PhD advisor! I succeeded and found [Dr Xaq Pitkow](https://xaqlab.com/), a very active member of the scientific community who works on topics such as control theory, machine learning, and theoretical neuroscience. 
 
 <br>
 <br>
 <hr />
-Code to build your own network of collaboration can be found [here](https://github.com/ItzelOlivos/ResearchCollaboration/blob/main/README.md).
+Code to build your own network of collaboration can be found [here](https://github.com/ItzelOlivos/ResearchCollaboration).
 
-You can explore a network of people studying brains, minds, and machines [here](![People studying minds]({{site.baseurl}}/assets/img/minds.html)).
+You can explore a network of people studying brains, minds, and machines [here]('{{site.baseurl}}/assets/img/minds.html')
