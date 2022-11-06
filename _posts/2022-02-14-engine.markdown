@@ -1,9 +1,0 @@
----
-layout: post
-title: V8 Engine Model that Works!
-date: 2022-02-15 00:00:00 +0300
-description: hobbies
-img: fun-engine.mov
-tags: [mechanics] # add tag
----
-The perfect date for Valentine's Day? How about building a metal V8 car engine model? About 4 hours of fun assembling more than 500 pieces 🏎!
