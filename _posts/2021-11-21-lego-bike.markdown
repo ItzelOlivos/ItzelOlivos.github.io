@@ -6,4 +6,6 @@ description: hobbies
 img: fun-bike.jpg
 tags: [LEGO] # add tag
 ---
-I bought this kit to entertain myself at home during the most critical days of the pandemic, but it was so much fun that I couldn't stop and finished assembling it in a few hours (646 pieces in total).
+I purchased this kit to keep myself entertained during the toughest days of the pandemic. It was a blast! 
+I got so into it that I'd breezed through all 646 pieces in just a few hours before I knew it. 
+Time flies by when you are having fun!

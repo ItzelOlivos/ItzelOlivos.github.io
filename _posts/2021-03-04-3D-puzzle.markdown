@@ -6,4 +6,7 @@ description: hobbies
 img: fun-puzzles.pdf
 tags: [puzzles] # add tag
 ---
-These are three-dimensional brainteaser puzzles. Enjoyable to work on, challenging to complete, and beautiful to display. (I bought them on Amazon) 
+Have you ever tried solving 3-D brainteaser puzzles? They're not just your ordinary puzzles; With their intricate 
+designs and mind-boggling challenges, they're not just fun to work on but also super satisfying to conquer. 
+Besides, once you've completed one, they make for some seriously eye-catching decor! 
+Guess where I found these gems? Yep, you guessed it – on Amazon! Happy puzzling!" 

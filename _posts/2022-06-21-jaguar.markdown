@@ -6,5 +6,8 @@ description: hobbies
 img: fun-jaguar.jpg
 tags: [huichol] # add tag
 ---
-Huichol art is typical from the states of Jalisco, Nayarit, Durango, and Zacatecas in Mexico. Colorful patterns of small beads covering terracotta sculptures are characteristic of these handcrafts.
-It took me 9 months to finish this project: from sculpting the jaguar to placing the last bead 😁
+Huichol art is a unique form of traditional Mexican craftwork originating from the Huichol or Wixárika indigenous people of Mexico. 
+It is renowned for its vibrant colors, intricate designs, and symbolic representations deeply rooted in Huichol culture and spirituality.
+The art primarily involves the use of small, brightly colored beads meticulously applied onto various objects such as sculptures, 
+masks, bowls, and ceremonial items. 
+Fascinated by this magical style, I embarked on this project, pouring nine months of passion into it. From molding the jaguar to meticulously placing each bead, it's been quite the journey!
