@@ -22,7 +22,7 @@ layout: main
 
 <div id="dispPosts" class="child-content-box clearfix" style="display:none">
   {% for post in paginator.posts %}
-      {% if post.description == "myPosts" %}
+      {% if post.description == "spanish" %}
           <article class="post">
             {% if post.img %}
               <a class="post-thumbnail" style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : post.img}})" href="{{post.url | prepend: site.baseurl}}"></a>

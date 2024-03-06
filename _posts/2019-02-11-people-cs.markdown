@@ -1,22 +1,49 @@
 ---
 layout: post
-title: Las matemáticas detrás de un robot inteligente
-date: 2019-02-11 00:00:00 +0300
-description: spanish
+title: The Mathematics Behind an Intelligent Robot
+date: 2020-02-11 00:00:00 +0300
+description: myPosts
 img: people-cs.pdf
 tags: [math] # add tag
 ---
-Llamamos a nuestra especie Homo Sapiens (del latín ser humano sabio) porque nuestra mente es el modelo de inteligencia más poderoso conocido hasta ahora. Sorprendentemente, incluso con todo ese poder que nos otorgó la naturaleza, seguimos preguntándonos cómo es que una máquina biológica, compuesta solo por billones de moléculas independientes que interactúan siguiendo sencillas reglas físicas y químicas, puede pensar, comportarse racionalmente y desarrollar conciencia.
+We call our species Homo sapiens (from Latin meaning wise human) because our minds are the most powerful model of 
+intelligence known so far. Surprisingly, even with all that power bestowed upon us by nature, we still wonder 
+how a tissue, composed of billions of independent molecules interacting following simple physical and chemical rules, 
+can think, behave rationally, and develop consciousness.
 
-El filósofo griego Aristóteles fue uno de los primeros en intentar codificar nuestro proceso de razonamiento; Aristóteles desarrolló un sistema de silogismos que permitía generar conclusiones mecánicamente, impulsando así la idea de que existen leyes que gobiernan el funcionamiento de la mente y que, por ende, sería posible construir artefactos mecánicos capaces de pensar y actuar por sí mismos. El campo de la Inteligencia Artificial busca construir dichos artefactos; es un campo cuyas ideas y puntos de vista se inspiran en varias disciplinas, por ejemplo: la existencia de una mente física y la forma de establecer conexiones lógicas entre metas y acciones, son materia de la Filosofía; las respuestas sobre por qué los humanos y los animales se comportan de la manera en que lo hacen, han sido extraídas de la Psicología; y la conclusión de que un conjunto de células simples puede conducir al pensamiento, la acción y la conciencia, se logró a través de importantes avances en Neurociencia. Por otro lado, para formalizar estas ideas, la Inteligencia Artificial desarrolla algoritmos basados en cuatro áreas fundamentales de las matemáticas: Lógica, Computación, Probabilidad y Economía.
+The Greek philosopher Aristotle was one of the first to attempt to codify our process of reasoning; Aristotle 
+developed a system of syllogisms that allowed for mechanically generating conclusions, thus driving the idea that 
+there are laws governing the functioning of the mind and, therefore, it would be possible to build mechanical 
+artifacts capable of thinking and acting on their own. The field of Artificial Intelligence seeks to build such 
+artifacts; it's a field whose ideas and viewpoints draw inspiration from various disciplines, for example: 
+the existence of a physical mind and how to establish logical connections between goals and actions are matters of 
+Philosophy; answers to why humans and animals behave the way they do have been extracted from Psychology; 
+and the conclusion that a set of simple cells can lead to thought, action, and consciousness was achieved 
+through significant advances in Neuroscience. On the other hand, to formalize these ideas, Artificial Intelligence 
+develops algorithms based on four fundamental areas of mathematics: Logic, Computing, Probability, and Economics.
 
+The logic developed by George Bool in 1847 underpins all intelligent systems today; this area of knowledge 
+provides the reasoning mechanisms that, in theory, can solve any problem described in formal terms. 
+However, there's a big difference between solving a problem in theory and solving it in practice, 
+so it's important to understand the extent to which logic can go in real life.
 
-La lógica desarrollada por George Bool en 1847 está detrás de todos los sistemas inteligentes de hoy en día; ésta área del conocimiento proporciona los mecanismos de razonamiento que, en teoría, pueden resolver cualquier problema descrito en términos formales. Sin embargo, existe una gran diferencia entre resolver un problema en teoría y resolverlo en la práctica, por lo que es importante hasta dónde puede llegar la lógica en la vida real.
+To find the limits of logic, another area of knowledge comes into play: the theory of computation. Figures like Kurt 
+Gödel and Alan Turing helped us identify which problems can be solved by a machine and estimate how many 
+computational resources a problem can consume.
 
-Para encontrar los límites de la lógica, llega otra área de conocimiento: la teoría de la computación. Personajes como Kurt Gödel y Alan Turing nos ayudaron a identificar qué problemas pueden ser resueltos por una máquina y a estimar cuántos recursos computacionales puede llegar a consumir un problema.
+Despite all these advances, building intelligent machines remained a significant challenge because we live in a 
+world that changes constantly and unexpectedly. For this reason, artificial intelligence uses many tools 
+from probability theory, for example, Bayes' theorem (yes, that thing you learned in high school and thought it 
+only served to calculate how likely you are to get an ace of hearts given that you play poker with a full deck) 
+is the mechanism that robots follow today to integrate evidence and build "models" of the world around them!
 
-Aún con todos estos avances, construir máquinas inteligentes seguía siendo un gran reto debido a que vivimos en un mundo que cambia constante e inesperadamente. Por esta razón, la inteligencia artificial utiliza muchas herramientas provenientes de la teoría de la probabilidad, por ejemplo, la ley de Bayes (sí, eso que aprendiste en la preparatoria y pensaste que solo servía para calcular qué tan probable es que te salga un as de corazones dado que juegas poker con una baraja completa) es el mecanismo que siguen los robots hoy en día para integrar evidencia y construir “modelos” del mundo que los rodea.
+But wait, there's more! For a robot to act on its own, it's necessary to study how to make decisions that lead 
+to acceptable outcomes. For this reason, artificial intelligence also makes use of knowledge in economics 
+(how to maximize reward functions), game theory (how to act when third parties can modify the course of action), 
+and operations research (how to make decisions when expected benefits are not immediate).
 
-¡Pero aún hay más! para que un robot pueda actuar por si mismo, es necesario estudiar cómo tomar decisiones que conduzcan a resultados aceptables. Por esta razón, la inteligencia artificial también hace uso de conocimientos en economía (cómo maximizar funciones de recompensa), teoría de juegos (cómo actuar cuando terceros pueden modificar el curso de acción), e investigación de operaciones (cómo tomar decisiones cuando los beneficios esperados no son inmediatos).
-
-Hay un largo camino por recorrer antes de que las computadoras puedan imitar todas las habilidades del cerebro humano; sin embargo, se han dado grandes pasos en la última década, por ejemplo, avances en Deep Reinforcement Learning (algoritmos que hacen uso de cantidades masivas de datos para permitir a los robots descubrir, por simple experimentación, cómo realizar actividades que ningún programador podría enseñarles) hoy logran hazañas que se creían imposibles, como derrotar a un campeón mundial de [Go](https://www.youtube.com/watch?v=WXuK6gekU1Y).
+There's a long way to go before computers can mimic all the skills of the human brain; 
+however, significant strides have been made in the last decade, for example, advances in Deep Reinforcement Learning 
+(algorithms that make use of massive amounts of data to enable robots to discover, through simple experimentation, 
+how to perform activities that no programmer could teach them) are achieving feats once thought impossible, 
+such as defeating a world champion of [Go](https://www.youtube.com/watch?v=WXuK6gekU1Y).
