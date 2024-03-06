@@ -1,31 +1,27 @@
 ---
 layout: post
-title: Scrapping Google Scholar
-date: 2020-01-21 00:00:00 +0300
+title: Exploring Google Scholar with the help of graph theory 
+date: 2021-01-21 00:00:00 +0300
 description: projects
 img: animation-scholar.gif # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [networks, scrapping] # add tag
 ---
-### What is it about?
+* This project is a web scrapper that collects data from Google Scholar and returns a collaboration network. 
 
-* This project is a web scrapper that collects data from Google Scholar and returns a network of collaboration. 
-
-* Given a list of Google Scholar users that you can customize, the scrapper recursively collects information about their co-authors.
+* Given a list of Google Scholar users, the scrapper recursively collects information about their co-authors.
 
 * The information retrieved is organized into a graph whose nodes represent authors and edges represent publications in common. 
 
-* The size of the node represent its "betweeness centrality", a measure that indicates the number of shortest paths passing through the node. The higher this number, the more influence the author has over the network.
+* The node's size represents its "betweenness centrality," a measure that indicates the number of shortest paths passing through it. The higher this number, the more influence the author has over the network. The color of each node denotes the author's affiliation.
 
-* The color of the node denotes the author's affiliation.
-
-* I use plotly (a very useful tool to display data in python) to generate interactive graphs. You can rotate the graph, zoom in and out, and learn more about the authors' research interests by hovering the nodes. 
+* I use Plotly (a handy tool for displaying data in Python) to generate interactive graphs. By hovering the nodes, you can rotate the graph, zoom in and out, and learn more about the authors' research interests. 
 
 ### Why it matters?
 
-* I engineered this network to find my PhD advisor! I succeeded and found [Dr Xaq Pitkow](https://xaqlab.com/), a very active member of the scientific community who works on topics such as control theory, machine learning, and theoretical neuroscience. 
+* I engineered this network to find my PhD advisor! I succeeded and found [Dr Xaq Pitkow](https://xaqlab.com/), a very active member of the scientific community who mixes ideas from control theory, machine learning, and neuroscience to find fundamental principles that give biological brains an advantage over machines when it comes to perception and mobility. 
 
 <br>
 <br>
 <hr />
-Code to build your own network of collaboration can be found [here](https://github.com/ItzelOlivos/ResearchCollaboration).
+You can find the code to build your own network of collaboration [here](https://github.com/ItzelOlivos/ResearchCollaboration).

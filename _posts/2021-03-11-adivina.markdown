@@ -10,7 +10,8 @@ Reinforcement Learning (RL) has become the silver bullet behind many advancement
 
 Nevertheless, we are still far from seeing robots achieving human-level performance in places with unexpected operating conditions. One challenge that prevents RL from unleashing its full power in robotics problems is the need for reward functions that accurately capture the task's objective. This sounds super weird! But since robots don't speak Spanish, English, or Chinese, how else could we let them know what we want them to do?
 
-At Stanford University, Dr. Dorsa Sadigh has a better idea. In her research paper titled "Learning reward functions by integrating human demonstrations and preferences," Dr. Sadigh shows how a robot can synthesize reward functions automatically by seeing demonstrations of a 
+At Stanford University, Dr. Dorsa Sadigh has a better idea. In her research paper titled "[Learning reward functions by integrating 
+human demonstrations and preferences](https://arxiv.org/abs/1906.08928)," Dr. Sadigh shows how a robot can synthesize reward functions automatically by seeing demonstrations of a 
 human expert and asking some questions about it.
 
 Allowing the robot to learn the reward function through demonstrations is not new; this is a well-known idea called Inverse Reinforcement Learning (IRL). However, IRL requires a human to operate a robot remotely, which is very hard! A robot's body is way different from ours 

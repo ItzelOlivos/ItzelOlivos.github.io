@@ -1,13 +1,11 @@
 ---
 layout: post
 title: Tackling the Contention Resolution Problem
-date: 2019-02-28 00:00:00 +0300
+date: 2020-02-28 00:00:00 +0300
 description: projects
 img: animation-goal.gif # Add image post (optional)
 tags: [Algorithms, Optimization, Randomized] # add tag
 ---
-### What is it about?
-
 * This work aims to solve the single access contention resolution problem. The problem consists of computing a symmetric policy that allows a set of nodes to access a shared resource without exchange of information among them. 
 
 * Assumptions:
@@ -28,15 +26,15 @@ tags: [Algorithms, Optimization, Randomized] # add tag
 
 * The canonical strategy to solve the problem is to let the nodes attempt to access the resource using a fixed probability of transmission. GOAL-CR substantially outperforms this strategy by making optimal use of the shared communication channel. 
 
-* We formally proved that the GOAL-CR computes access policies that minimize the expected contention resolution time. 
+* We formally proved that GOAL-CR computes access policies that minimize the expected contention resolution time. 
 
 * According to experiments, the performance of the greedy policies is close to that of a protocol with complete information about the exact number of nodes that have not yet accessed the resource.
 
 ### Why it matters?
 
-* Minimizing the contention resolution time of the set-up phase of WSNs not only impacts metrics like channel utilization, throughput, and energy consumption, it also impacts critical metrics like the response time of the network to catastrophes like a wildfires or earthquakes 
+* Minimizing the contention resolution time of the set-up phase of WSNs not only impacts metrics like channel utilization, throughput, and energy consumption, it also impacts critical metrics such as the response time of the network to catastrophes like wildfires or earthquakes 
 
 <br>
 <br>
 <hr />
-More details can be found [here](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8654626). Code available [here](https://github.com/ItzelOlivos/FinalProject677).
+More details can be found [here](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8654626). Code available [here](https://github.com/ItzelOlivos/GOAL-CR).
