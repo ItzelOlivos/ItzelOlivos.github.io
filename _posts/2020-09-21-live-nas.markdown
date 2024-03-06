@@ -1,19 +1,29 @@
 ---
 layout: post
-title: Transmitiendo en 4K con ayuda de Deep Learning
-date: 2020-09-21 00:00:00 +0300
-description: spanish
+title: Streaming in 4K with Deep Learning's help
+date: 2021-09-21 00:00:00 +0300
+description: myPosts
 img: liveNAS.pdf
 tags: [deep learning] # add tag
 ---
-Transmitir en vivo está de moda y ¡qué mejor que hacerlo en 4K!; sin embargo, el ancho de banda disponible en dispositivos móviles puede convertirse en un obstáculo difícil de superar. Para resolver este problema, investigadores del Korea Advanced Institute of Science and Technology proponen una nueva arquitectura cliente-servidor llamada liveNAS. La idea es permitir al cliente (nosotros) transmitir video con la calidad que permite su ancho de banda y pedirle a un servidor (Amazon web services, por ejemplo) que escale los cuadros de video usando una red neuronal que continuamente aprende a mapear imágenes de baja a alta resolución.
+Live streaming is all the rage, and nothing beats doing it in 4K! However, the available bandwidth on mobile devices 
+can be a formidable obstacle for most streamers. To tackle this problem, researchers from the Korea Advanced Institute of Science 
+and Technology infused the power of Deep Learning in a new client-server architecture called [liveNAS](https://dl.acm.org/doi/10.1145/3387514.3405856). The idea, in a nutshell, 
+is to let the users stream video with the quality permitted by their bandwidth and let a server (for example 
+Amazon Web Services, Google Cloud, Microsoft Azure, etc) to scale the video frames using a neural network that continuously 
+learns to map low to high-resolution images.
 
-El principal reto detrás de esta idea es implementar un algoritmo capaz de aprender de manera continua y adaptarse a los cambios (casi siempre inesperados) del mundo real, esta es la razón por la que la robótica, por ejemplo, es una de las últimas fronteras en el aprendizaje automático. Así pues, la propuesta de LiveNAS para entrenar una red neuronal artificial en tiempo (casi) real es explotar la redundancia en las imágenes que nos rodean (te explico esto más adelante) y el poder del cómputo en paralelo.
+The main challenge here is to develop an algorithm capable of continuously learning and adapting in real-time. To address this challenge, LiveNAS takes advantage of the power of parallel computing 
+and exploits a beautiful property of our world: most of what we experience is very redundant!  
 
-El primer componente de esta arquitectura es el “Patch sampler”. La tarea de este componente es determinar qué fragmentos de los fotogramas que se desean transmitir serán difíciles de escalar a alta resolución. Para lograr esto: 1) Se comprime el fotograma original, se descomprime y se mide qué tanto se distorsiono después de este proceso, 2) El fotograma original se divide en muchos pedacitos (parches), se selecciona uno al azar, se comprime, se descomprime y se mide nuevamente qué tanto se distorsionó, 3) Si se detecta que el parche se distorsionó mucho más que el fotograma completo, éste se etiqueta como una “muestra interesante”, 4) Los pasos 2 y 3 se repiten hasta juntar 10 muestras interesantes y se envían al servidor. Del lado del servidor, el componente “Content-adaptive trainer” consume las muestras interesantes y ajusta los parámetros de una red neuronal artificial cuyo objetivo es aprender a escalar imágenes de baja a alta resolución.
+Redundant? Yes! pixels of similar colors appear together in large areas within a frame and remain together in
+subsequent frames; this is why [our eyes evolved to detect edges](https://www.sciencedirect.com/science/article/pii/S0042698997001211): 
+the most informative parts of natural scenes. 
 
-Enviar solo 10 parchecitos para alimentar a la red neuronal en lugar del fotograma completo reduce considerablemente el tiempo de entrenamiento. Esta idea funciona porque el mundo que nos rodea es ¡súper redundante! Como podemos ver en la siguiente secuencia de fotogramas, pixeles de colores similares aparecen juntos en grandes áreas dentro del fotograma y permanecen juntos en fotogramas subsecuentes; esta redundancia hace que las partes más informativas de las imágenes del mundo que nos rodea sean los bordes (no por nada nuestros ojitos evolucionaron para detectar bordes, aprende más [aquí](https://www.sciencedirect.com/science/article/pii/S0042698997001211)).
+Due to this redundancy, sending only ten small patches to feed a deep neural network instead of the
+complete frame is enough to let it learn how to scale low to high-resolution video frames. This idea significantly 
+reduces the training time!
 
-Finalmente, la arquitectura consider un “Super-resolution processor” del lado del servidor; este componente cuenta con GPUs para procesar varios fotogramas simultáneamente. El resultado final es un escalamiento automático de imágenes tan veloz que da la impresión al usuario final (followers de Tik Tok, por ejemplo) de estar consumiendo de video en 4K a pesar de las fallas de origen.
-
-Si quieres leer el artículo completo, éste fue publicado en Julio 2020 para the Annual conference of the ACM Special Interest Group on Data Communication on the applications, technologies, architectures, and protocols for computer communication (SIGCOMM ’20). Encuéntralo [aquí](https://dl.acm.org/doi/10.1145/3387514.3405856)!
+LiveNAS also relies on the availability of "Super-resolution processors" on the server side, that is, powerful GPUs that can process multiple frames simultaneously. The result is rapid automatic image scaling that gives the 
+end-user (TikTok followers, for example) the impression of consuming 4K streaming videos even though their favorite influencer 
+is streaming in a poor-quality format! 🎥

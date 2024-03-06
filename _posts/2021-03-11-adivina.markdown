@@ -1,17 +1,23 @@
 ---
 layout: post
-title: Robots que juegan "Adivina Quién"
-date: 2021-03-11 00:00:00 +0300
-description: spanish
+title: Robots playing "Guess Who" to understand people's requests
+date: 2022-03-11 00:00:00 +0300
+description: myPosts
 img: adivina.pdf
 tags: [deep learning] # add tag
 ---
-Reinforcement Learning (RL) se ha convertido en la bala de plata detrás de muchos avances en robótica; hoy en día, por ejemplo, es común ver robots autónomos que aprenden, mediante RL, cómo desarrollar tareas esenciales en los almacenes de Amazon (mira [esto](https://www.youtube.com/watch?v=PC-9HYJ1nCI)!). No obstante, los algoritmos de tipo RL requieren que un humano experto diseñe una función de recompensa capaz de codificar el objetivo de la tarea. ¡Esto suena súper raro! pero como los robots no hablan ni español, ni inglés, ni chino, ¿de qué otra manera podríamos hacerles saber qué es exactamente lo que queremos que hagan?
+Reinforcement Learning (RL) has become the silver bullet behind many advancements in robotics; nowadays, it's common to see robots learning autonomously, via a trial-and-error process, how to perform real-world tasks, such as sorting items in Amazon warehouses. 
 
-En la Universidad de Stanford, la Doctora Dorsa Sadigh tiene una idea mejor. En su artículo de investigación [“Learning reward functions by integrating human demonstrations and preferences“](https://arxiv.org/abs/1906.08928), la Doctora muestra cómo es que, mediante demostraciones de un humano experto y una serie de preguntas hechas por el robot, éste puede sintetizar por sí solo la función de recompensa que codifica la tarea que debe realizar.
+Nevertheless, we are still far from seeing robots achieving human-level performance in places with unexpected operating conditions. One challenge that prevents RL from unleashing its full power in robotics problems is the need for reward functions that accurately capture the task's objective. This sounds super weird! But since robots don't speak Spanish, English, or Chinese, how else could we let them know what we want them to do?
 
-La idea de permitir al robot aprender la función de recompensa mediante demostraciones no es nueva, se conoce como Inverse Reinforcement Learning (IRL) desde hace varios años; sin embargo, IRL requiere que un humano opere de manera remota un robot cuya fisionomía es distinta a la nuestra (el robot Fetch que vemos en la imagen, por ejemplo, pareciera tener un brazo ¡con tres codos! esto, naturalmente, causa demostraciones imprecisas). La idea innovadora de la Doctora Sadigh es complementar IRL con una técnica de aprendizaje, conocida como Active Learning, que le permite al robot hacer preguntas sobre las preferencias del humano hasta encontrar la función de recompensa que mejor codifica la tarea que éste debe realizar.
+At Stanford University, Dr. Dorsa Sadigh has a better idea. In her research paper titled "Learning reward functions by integrating human demonstrations and preferences," Dr. Sadigh shows how a robot can synthesize reward functions automatically by seeing demonstrations of a 
+human expert and asking some questions about it.
 
-El proceso es simple: 1. El humano le demuestra al robot qué desea que éste haga al operarlo de manera remota y ejecutar la tarea de interés (por ejemplo, recolectar un objeto y moverlo hasta una nueva posición). 2. El robot genera una distribución de probabilidad sobre las trayectorias (o hipótesis) que podrían explicar lo que el humano intenta demostrar. 3. El robot elige el par de hipótesis que maximizan la cantidad de información que se podría obtener tras recibir la respuesta del humano. 4. El humano elige cuál de las hipótesis es la más cercana a lo que él o ella intenta demostrar. 5. la distribución de probabilidad sobre todas las posibles hipótesis se actualiza. y 6. El proceso continúa desde el paso 3 hasta que el robot tiene confianza en que cierta hipótesis es la verdadera. Básicamente, el robot juega Adivina Quién con el human, solo que en lugar de personajes, el robot propone trayectorias, y en lugar de preguntar si “su personaje tiene barba”, pregunta si hipótesis X se acerca más o menos que hipótesis Y a su verdadera intención 🙂
+Allowing the robot to learn the reward function through demonstrations is not new; this is a well-known idea called Inverse Reinforcement Learning (IRL). However, IRL requires a human to operate a robot remotely, which is very hard! A robot's body is way different from ours 
+(the Fetch robot we see in the header of this post, for example, has an arm with three elbows!). These differences in physiology result
+in imprecise demonstrations. To address this challenge, Dr. Sadigh complements IRL with a learning technique known as Active Learning, 
+which allows the robot to ask questions about the human's preferences until it finds the reward function that best encodes the requested task.
 
-En conclusión, este algoritmo permite que humanos no expertos en robótica enseñen a las máquinas cómo resolver tareas de una manera intuitiva.
+The process is simple: The human demonstrates what she wants the robot to do by remotely operating it. The robot generates some trajectories (hypotheses) that achieve what it "thinks" the human is requesting and selects two hypotheses that maximize the amount of information that could be obtained after asking the human which one is correct. Once the human has chosen the one that most resemble what she is trying to demonstrate, the robot 
+discards some hypotheses and asks a new question. The process continues until the robot is confident that a particular hypothesis is true. Sounds familiar? 
+Yes, it does! To understand her request, the robot plays "Guess Who" with the human 🙃
