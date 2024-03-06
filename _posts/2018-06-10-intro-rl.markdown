@@ -1,15 +1,34 @@
 ---
 layout: post
-title: Aprendiendo a andar en bici sin leer el manual
-date: 2018-06-10 00:00:00 +0300
-description: spanish
+title: Learning to ride a bike without reading the manual
+date: 2019-06-10 00:00:00 +0300
+description: myPosts
 img: intro-rl.pdf
 tags: [reinforcement learning] # add tag
 ---
-¿Por qué es fácil andar en bicicleta pero difícil explicarle a un novato cómo debería mover cada uno de sus musculitos para completar un recorrido? Una posible explicación es que este tipo de actividades, que aparentan ser simples e intuitivas, son difíciles de describir mediante una serie de instrucciones detalladas. Afortunadamente, los humanos no aprendemos a andar en bicicleta leyendo manuales exhaustivos, simplemente lo intentamos, nos tropezamos, nos sobamos y continuamos practicando hasta lograrlo. Este proceso de aprendizaje, característico en humanos y otros animales, es una habilidad cognitiva que la inteligencia artificial busca imitar que las máquinas puedan descubrir cómo alcanzar objetivos complejos a través de un proceso de ensayo y error.
+Why is it easy to ride a bike but difficult to explain to a newbie how to move each little muscle to complete a ride? 
+One possible explanation is that activities like this, which seem simple and intuitive, are hard to describe through 
+a series of detailed instructions. Fortunately, humans don't learn to ride a bike by reading exhaustive manuals; 
+we simply give it a try, stumble, brush ourselves off, and keep practicing until we get it right. 
 
-Hay un largo camino por recorrer antes de que las computadoras puedan realizar cualquier actividad sin ningún tipo de intervención humana, pero en la última década hemos dado pasos agigantados hacia ese objetivo. Actualmente, sistemas inteligentes pueden interactuar en el mundo real y alcanzar metas complejas por sí solos, algunos ejemplos son brazos robóticos resolviendo cubos Rubik (mira [aquí](https://openai.com/blog/learning-dexterity/)) o vehículos autónomos navegando en las calles de Silicon Valley (mira [aquí](https://waymo.com/)). La bala de plata detrás de muchos de estos avances es una familia de algoritmos conocida como Reinforcement Learning (RL).
+This learning process, characteristic of humans and other animals, is a cognitive skill that artificial intelligence 
+seeks to imitate so that machines can figure out how to achieve complex goals through trial and error.
 
-Los algoritmos de tipo RL están diseñados para aprender, mediante interacciones con el ambiente, a tomar secuencias de decisiones que maximizan una función de recompensa. Encontrar buenas secuencias de decisiones es un problema complejo porque el algoritmo no recibe retroalimentación que lo guíe para saber si va por el camino correcto. Piensa, por ejemplo, en el mecanismo mediante el cual Amazon decide qué artículos recomendarte. Básicamente, su algoritmo de inteligencia artificial analiza millones de ventas, encuentra clientes con un perfil de compra similar al tuyo, elige productos que esos clientes ya compraron, y se retro-alimenta con tu reacción (comprar o no) para no fallar la próxima vez. Ahora piensa en un agente artificial que juega ajedrez, en este caso, el agente no recibirá retroalimentación tras cada decisión tomada, ¿es bueno o malo capturar peones?, ¿es bueno o malo sacrificar piezas?, lo único que realmente puede guiar al agente es el resultado de la partida (¿ganó o perdió?), y esta retroalimentación es recibida después de unas ¡40 decisiones!.
+There's a long way to go before machines can perform any activity without any human intervention, 
+but in the last decade, we've taken huge steps toward that goal. Currently, intelligent systems can 
+interact in the real world and achieve complex goals on their own. Some examples include robotic arms solving 
+Rubik's cubes or autonomous vehicles navigating the streets of Silicon Valley. The silver bullet behind many of these 
+advances is a family of algorithms known as Reinforcement Learning (RL). 
 
-Lo más interesante es que para lograr resolver estos sofisticados retos, los algoritmos de tipo RL hacen uso de ideas provenientes de áreas muy diversas, desde filosofía hasta neurociencia, pasando por probabilidad, estadística, algebra lineal y economía.
+RL algorithms are designed to learn, through interactions with the environment, how to make sequences of decisions 
+that maximize a reward function. Finding good sequences of decisions is a complex problem because the algorithm 
+doesn't receive feedback to guide it on whether it's on the right path. Think, for example, of the mechanism 
+by which Amazon decides which items to recommend to you. Basically, its artificial intelligence algorithm analyzes 
+millions of sales, finds customers with a similar buying profile to yours, chooses products those customers have 
+already bought, and learns from your reaction (buying or not) to improve next time. Now think of an artificial agent 
+playing chess. In this case, the agent won't receive feedback after every decision made. Is it good or bad to capture pawns? 
+Is it good or bad to sacrifice pieces? The only thing that can really guide the agent is the outcome of the game (did it win or lose?), 
+and this feedback is received after about 40 decisions!
+
+What's most interesting is that to solve these sophisticated challenges, RL algorithms draw on ideas from diverse areas, 
+from philosophy to neuroscience, through probability, statistics, linear algebra, and economics.
