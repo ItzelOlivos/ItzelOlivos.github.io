@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Unveiling the enigmatic brain: How does it master uncertainty and navigate efficiently a dynamic world?
-date: 2023-12-11 00:00:00 +0300
+title: Unveiling the enigmatic brain - How does it master uncertainty and navigate efficiently a dynamic world?
+date: 2023-11-07 00:00:00 +0300
 description: myPosts
 img: bayesian-brain.pdf
 tags: [neuroscience] # add tag
