@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unveiling the enigmatic brain - How does it master uncertainty and navigate efficiently a dynamic world?
+title: Harnessing the power of AI to reveal the secrets of the most powerful reasoning engine ever designed
 date: 2023-11-07 00:00:00 +0300
 description: myPosts
 img: bayesian-brain.pdf
