@@ -44,7 +44,11 @@ As a Ph.D. student, I've delved deep into unraveling the brain's mastery in tack
 Do you want to learn more about the synergy between brains, minds, and machines? Check this out:
 
 [Control when confidence is costly]()
+
 [Spike-Constrained Stochastic Control](https://itzelolivos.github.io/spike-lqg/)
+
 [Engineering a Less Artificial Intelligence](https://www.cell.com/neuron/pdf/S0896-6273(19)30740-8.pdf)
+
 [Computational rationality: A converging paradigm for intelligence in brains, minds, and machines](https://www.science.org/doi/pdf/10.1126/science.aac6076?casa_token=G_kpCItA7jkAAAAA:fRAYrnqu_XHRgpIJkI9QX9xx55ZyJtl7YajNx9qfk1ShHQF0oO_o6SZNaaOqekyBbukceS3xImanTA)
+
 [Building Machines That Learn and Think Like People](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/A9535B1D745A0377E16C590E14B94993/S0140525X16001837a.pdf/building-machines-that-learn-and-think-like-people.pdf)
