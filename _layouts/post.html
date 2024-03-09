@@ -28,22 +28,24 @@ layout: main
         <div class="page-share">
           <h4>Share it on:</h4>
           <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
-          <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
         </div>
         <div class="page-share">
           <h4>Thanks for reading!</h4>
-          <button onclick="goBack()">Go Back</button>
+          <a href="#" title="Go Back" onclick="goBack()">Go Back</a>
+          <!--<button onclick="goBack()">Go Back</button>-->
           <script>
           function goBack() {
             window.history.back();
           }
           </script>
         </div>
+        <!--
         <div class="page-tag">
           {% for tag in page.tags %}
             <a href="{{site.baseurl}}/tags#{{tag}}" class="tag">&#35; {{ tag }}</a>
           {% endfor %}
         </div>
+        -->
       </div>
     </div> <!-- End Wrap Content -->
   </div> <!-- End Page Content -->
