@@ -3,8 +3,11 @@ layout: post
 title: Interview at IPN Radio
 date: 2022-05-31 00:00:00 +0300
 description: news
-img: external-radio-ipn.png
-exurl: https://twitter.com/RadioIPNOficial/status/1531704566139396102
+img: external-radio-ipn.png 
 tags: [sharing]  # add tag
 ---
-IPN Radio invited me to share my experiences as a PhD student in the USA. You'll be redirected to the post in 3... 2... 1...
+IPN Radio kindly invited me to share my experiences as a PhD student in the USA. During the interview, 
+I had the opportunity to chat about resilience, the importance of selecting a supportive advisor over prioritizing a prestigious university, 
+resources that can help Mexican students in maximizing their chances of acceptance at a university in the USA, 
+and the joy of being paid to study something you're passionate about. 
+You can catch some highlights of the interview [here](https://twitter.com/RadioIPNOficial/status/1531704566139396102)!

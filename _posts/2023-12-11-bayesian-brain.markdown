@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Harnessing the power of AI to reveal the secrets of the most powerful reasoning engine ever designed
+title: Harnessing the power of AI to reveal the secrets of our brains
 date: 2023-11-07 00:00:00 +0300
 description: myPosts
 img: bayesian-brain.pdf

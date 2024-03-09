@@ -1,8 +1,9 @@
 title: Itzel Olivos-Castillo
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Itzel Coral Olivos Castillo. PhD Candidate at Rice University. 
+  My research seeks to unravel the mechanisms the brain uses to tackle joint inference and control problems with resource efficiency. 
+  By studying how brain-like constrained artificial agents solve hard control problems, 
+  we can design more robust and power-efficient drones, nanobots, AI-powered prosthetics, or any device looking to reduce its carbon footprint!
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ItzelOlivos.github.io" # the base hostname & protocol for your site, e.g. http://example.com
@@ -14,7 +15,7 @@ author-img: itzel.jpg # add your photo
 about-author: <br> 💼 PhD candidate at <a href="https://csweb.rice.edu">Rice University</a> (<a href="https://xaqlab.com">LAB-lab</a>) <br> 🏆 Fulbrighter 2019 - 2022 <br> 🎓 BSc and MSc degrees from <a href="https://www.youtube.com/watch?v=vjSRL3_3DGU&t=210s">IPN</a>, Mexico <br> ❤️ Graphs, Reinforcement Learning, Neuroscience
 social-twitter: _ItzelCoral # add your Twitter handle
 # social-facebook: # add your Facebook handle
-social-github: ItzelOlivos # add your Github handle
+# social-github: ItzelOlivos # add your Github handle
 # social-linkedin: # add your Linkedin handle
 social-email: itzel@rice.edu # add your Email address
 
