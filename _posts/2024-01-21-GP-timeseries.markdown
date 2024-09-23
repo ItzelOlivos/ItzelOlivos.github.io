@@ -1,40 +1,43 @@
 ---
 layout: post
 title: Gaussian Process Regressor
-date: 2023-08-15 13:32:20 +0300
+date: 2024-01-21 13:32:20 +0300
 description: projects
 img: animation-spikes.gif # Add image post (optional)
 fig-caption: # Add figcaption (optional)
-tags: [timeseries, machine learning]
+tags: [control, neuroscience]
 ---
-### Gaussian Process (GP)
+* We develop a version of stochastic control that accounts for computational costs in the brain. 
 
-A GP is a Gaussian distribution over functions. Example: f is a GP if f(x) = [f(x1), f(x2),..., f(xn)] is Gaussian distributed for any vector [x1, x2, ..., xn]
+* Combining concepts of efficient coding with control theory, we analyze Linear Quadratic Gaussian (LQG) control. LQG is a well-understood mathematical example of optimal control that combines a Kalman filter to keep track of a hidden state with a linear regulator that minimizes integrated quadratic state and action costs. When the state dynamics are linear, and all noise sources are Gaussian, this combination is your best bet!
 
-A GP is specified by a mean [mu(x1), ..., mu(xn)] and a covariance/kernel function K_{i, j} = k(xi, xj)
+* We assume the brain encodes uncertainty using a Probabilistic Population Code (PPC), which is a distributed neural representation that supports evidence integration through linear operations and marginalization through nonlinear operations
 
-Given a set of observed inputs, corresponding output values, and a Gaussian process prior, we can compute the posterior over the value f(x) at any query input x. How?
+* We implement the Kalman filter using a spiking neural network:
 
-Find the joint distribution [f(x*), f(x1), ..., f(xn)]
-
-Use the conditioning rules for a Gaussian to compute f(x*) | f(x1), ..., f(xn)
-
-GPs can handle noise versions of input values because [f(x*), f(y1), ..., f(yn)] with yi = xi + (white Gaussian noise) is also Gaussian
-
-The kernel parameters (length scale and noise variance) are chosen such that they maximize the log likelihood of the observed data (Don't forget to cross-validate!)
-
-Computational complextity:
-
-O(N^3) computations to find the posterior mean weight vector and O(N c) to make a prediction, with N:=number of observations and c:=complexity of evaluating the kernel.
-GPs scale badly, however, a linear kernel (aka Bayesian Linear Regression) can help: O(d^3) computations needed to find the posterior mean weight vector and O(d) to make predictions, with d:=dimension of the input
+    * Spike trains emitted by a sensory layer of neurons with Poisson-like response variability encode observations about the Gaussian world state. 
+  
+    * This neural response feeds a recurrent layer whose firing activity encodes the belief the agent would obtain by implementing recursive Bayesian estimation based on its last observation and action executed. 
+  
+    * The agent decodes the hidden world state using different projections of the neural activity emitted by the recurrent layer. 
+  
+    * The agent minimizes the expected total integrated state, action, and neural cost by adjusting its spike rates and control gain.
 
 ### Take away
 
-* mmm
+* In this simplest version, the precision of the observation and inferences is directly proportional to the number of spikes. 
+
+* We reveal a trade-off: an agent can obtain more utility overall by relinquishing some task performance if doing so saves enough spikes. 
+
+* The optimal spike rate varies with the properties of the system to be controlled (for example, stability and signal-to-noise ratio).
 
 ### Why it matters?
 
-* mmm
+* Previous efforts to identify metabolically efficient ways of coding sensory evidence are restricted to feedforward settings. Here, we consider the consequences of closed-loop control. 
+
+* This work provides a foundation for a new type of bounded rational behavior that could be used to explain suboptimal computations in the brain.
+
+* Understanding the mechanisms that give biological organisms an advantage over machines in perception and mobility can help engineer more robust, general-purpose, and energy-efficient robots.
 
 <br>
 <br>
